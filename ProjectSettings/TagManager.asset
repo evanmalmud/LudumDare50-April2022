@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3312105775
+    locked: 0
+  - name: BG-Tiles
+    uniqueID: 956119253
+    locked: 0
+  - name: On-Top-Tiles
+    uniqueID: 2580562263
+    locked: 0
+  - name: FG
+    uniqueID: 3067321795
+    locked: 0
