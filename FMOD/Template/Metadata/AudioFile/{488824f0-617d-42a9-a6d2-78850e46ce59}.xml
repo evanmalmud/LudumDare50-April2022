@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{488824f0-617d-42a9-a6d2-78850e46ce59}">
+		<property name="assetPath">
+			<value>RANDOM OFFICE ONESHOTS-006.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.4220208333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
+		</relationship>
+	</object>
+</objects>
