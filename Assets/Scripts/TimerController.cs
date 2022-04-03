@@ -22,9 +22,13 @@ public class TimerController : MonoBehaviour
 
     Vector2 distance;
 
-    private void Start()
+    private void Awake()
     {
         defaultTimer = gameStateManager.lengthOfLevel;
+    }
+
+    private void Start()
+    {
         reset();
     }
     // Update is called once per frame

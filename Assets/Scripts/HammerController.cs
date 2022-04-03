@@ -21,8 +21,4 @@ public class HammerController : ClickableBase {
         return false;
     }
 
-    public override bool onBadDrop()
-    {
-        return true;
-    }
 }

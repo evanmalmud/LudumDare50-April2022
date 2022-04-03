@@ -55,8 +55,19 @@ public class GameStateManager : MonoBehaviour
 
     public ConsoleController consoleController;
 
+    public GameObject gameOverCanvas;
+
+    public bool gameover = false;
+
     void Awake()
     {
+        reset();
+    }
+
+    public void reset()
+    {
+        gameover = false;
+        gameOverCanvas.SetActive(false);
         livesController.reset();
         submitController.reset();
         //StartCoroutine(GetRequest(namesURL, names, namesCSV));
@@ -65,13 +76,21 @@ public class GameStateManager : MonoBehaviour
         textLines = CSVReader.Read(textLinesCSV);
 
         //Pick 5 random Names from above
-        foreach(ClockController clock in clocks) {
+        foreach (ClockController clock in clocks) {
             int indexOfName = Random.Range(0, names.Count);
             string nameChosen = (string)names[indexOfName][namesColumn];
             clock.setName(nameChosen);
             //Remove used name
             names.RemoveAt(indexOfName);
         }
+
+        submitController.reset();
+        bool anyWrong = false;
+
+        currentLengthOfLevel = 0f;
+        screenController.reset();
+        timerController.reset();
+        roundCount = 0;
 
     }
 
@@ -89,6 +108,10 @@ public class GameStateManager : MonoBehaviour
         // Update is called once per frame
     void Update()
     {
+        if(gameover)
+        {
+            return;
+        }
         if(currentLengthOfLevel < lengthOfLevel) {
             //Only post text if still in the main part of the level
             if(timeUntilNextText <= 0f) {
@@ -199,20 +222,19 @@ public class GameStateManager : MonoBehaviour
     }
 
     public void gameOver() {
+        gameover = true;
         //pause things and show game over screen
-
-        //On replay
-        Awake();
+        gameOverCanvas.SetActive(true);
     }
 
     public void replay()
     {
-        Awake();
+        reset();
     }
 
     public void plugStuck() {
         //Turn plug red and disable moving
-        plugController.isStuck = true;
+        plugController.setStuck(true);
         //turn controller red
         consoleController.isStuck = true;
     }
@@ -220,7 +242,7 @@ public class GameStateManager : MonoBehaviour
     public void plugUnStuck()
     {
         //Turn plug blue and enable moving
-        plugController.isStuck = false;
+        plugController.setStuck(false);
         //turn controller blue
         consoleController.isStuck = false;
     }

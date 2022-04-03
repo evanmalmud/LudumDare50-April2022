@@ -33,18 +33,18 @@ public class ScytheController : ClickableBase {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
-        if (clockController != null) {
-            hoveredClockController = clockController;
+        ClockDeathCollider clockDeath = collision.gameObject.GetComponent<ClockDeathCollider>();
+        if (clockDeath != null) {
+            hoveredClockController = clockDeath.clockController;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
-        if (clockController != null) {
-            if (clockController == hoveredClockController) {
+        ClockDeathCollider clockDeath = collision.gameObject.GetComponent<ClockDeathCollider>();
+        if (clockDeath != null) {
+            if (clockDeath.clockController == hoveredClockController) {
                 hoveredClockController = null;
             }
         }

@@ -28,7 +28,7 @@ public class LivesController : MonoBehaviour
     }
 
     public void loseLife() {
-        if (livesCount <= 0) {
+        if (livesCount <= 1) {
             gameStateManager.gameOver();
         } else {
             lives[livesCount - 1].SetActive(false);

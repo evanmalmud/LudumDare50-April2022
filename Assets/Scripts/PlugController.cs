@@ -11,6 +11,8 @@ public class PlugController : ClickableBase {
     public GameObject glowSprite;
     public GameObject stuckSprite;
 
+    public GameObject redGlow;
+
     public ConsoleController consoleController;
 
     public bool isStuck = false;
@@ -77,22 +79,60 @@ public class PlugController : ClickableBase {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
-        if(clockController != null) {
-            hoveredClockController = clockController;
+        ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
+        if(clockPlug != null) {
+            hoveredClockController = clockPlug.clockController;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);
-        ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
-        if (clockController != null) {
-            if(clockController == hoveredClockController) {
+        ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
+        if (clockPlug != null) {
+            if (clockPlug.clockController == hoveredClockController) {
                 hoveredClockController = null;
             }
         }
     }
 
+    void OnMouseOver()
+    {
+        if (isStuck) {
+            if(redGlow != null) {
+                redGlow.SetActive(true);
+            }
+        } else {
+            if (hoverGO != null) {
+                hoverGO.SetActive(true);
+            }
+        }
+    }
 
+    void OnMouseExit()
+    {
+        if (isStuck) {
+            if (redGlow != null) {
+                redGlow.SetActive(false);
+            }
+        } else {
+            if (hoverGO != null) {
+                hoverGO.SetActive(false);
+            }
+        }
+    }
+
+    public void setStuck(bool stuck) {
+        if(hoverGO.activeSelf || redGlow.activeSelf) {
+            hoverGO.SetActive(false);
+            redGlow.SetActive(false);
+            if(stuck)
+            {
+                redGlow.SetActive(true);
+            } else {
+                hoverGO.SetActive(true);
+            }
+        }
+        isStuck = stuck;
+    }
 }
