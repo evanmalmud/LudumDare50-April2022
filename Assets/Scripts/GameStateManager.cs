@@ -48,6 +48,10 @@ public class GameStateManager : MonoBehaviour
 
     public TimerController timerController;
 
+    public int roundCount = 1;
+
+    public int livesLeft = 3;
+
     void Awake()
     {
         submitButton.SetActive(false);
@@ -171,9 +175,10 @@ public class GameStateManager : MonoBehaviour
         submitButton.SetActive(false);
         screenController.reset();
         timerController.reset();
-
+        roundCount++;
         if (anyWrong){
             Debug.LogError("SOME ANSWERS WRONG");
+            livesLeft--;
         } else {
             Debug.Log("ALL RIGHT!!!!");
         }
