@@ -44,10 +44,10 @@ TagManager:
   - name: BG
     uniqueID: 3312105775
     locked: 0
-  - name: BG-Tiles
+  - name: Mid
     uniqueID: 956119253
     locked: 0
-  - name: On-Top-Tiles
+  - name: Top
     uniqueID: 2580562263
     locked: 0
   - name: FG
