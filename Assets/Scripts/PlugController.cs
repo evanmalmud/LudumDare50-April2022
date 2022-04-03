@@ -8,12 +8,14 @@ public class PlugController : ClickableBase {
 
     public bool isConnected = false;
 
-    public Vector3 mouseMoveOffset;
-
     public GameObject glowSprite;
 
     public ConsoleController consoleController;
 
+    private void Start()
+    {
+        additionalStart();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,12 +24,7 @@ public class PlugController : ClickableBase {
         } else {
             glowSprite.SetActive(false);
         }
-        if(clickAndHeld) {
-            Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            newPos += mouseMoveOffset;
-            newPos.z = 0;
-            transform.position = newPos;
-        }
+        additionalUpdate();
     }
 
     public override bool onClick()

@@ -8,9 +8,23 @@ public class ClickableBase : MonoBehaviour
 
     public Transform lastGoodLocation;
 
-    private void Start()
+    public Vector3 mouseMoveOffset;
+
+    public GameObject hoverGO;
+
+    public void additionalStart()
     {
         lastGoodLocation = transform;
+    }
+
+    public void additionalUpdate()
+    {
+        if (clickAndHeld) {
+            Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            newPos += mouseMoveOffset;
+            newPos.z = 0;
+            transform.position = newPos;
+        }
     }
 
     // Start is called before the first frame update
@@ -31,5 +45,19 @@ public class ClickableBase : MonoBehaviour
         clickAndHeld = false;
         transform.position = lastGoodLocation.position;
         return true;
+    }
+
+    void OnMouseOver()
+    {
+        if(hoverGO != null) {
+            hoverGO.SetActive(true);
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (hoverGO != null) {
+            hoverGO.SetActive(false);
+        }
     }
 }
