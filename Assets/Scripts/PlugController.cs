@@ -32,7 +32,7 @@ public class PlugController : ClickableBase {
 
     public override bool onClick()
     {
-        Debug.Log("plug on click");
+        //Debug.Log("plug on click");
         isConnected = false;
         consoleController.isConnected = false;
         consoleController.connectedClock = null;
@@ -45,9 +45,9 @@ public class PlugController : ClickableBase {
 
     public override bool onDrop()
     {
-        Debug.Log("plug on drop");
+        //Debug.Log("plug on drop");
         if (hoveredClockController != null) {
-            Debug.Log("plug on drop2");
+            //Debug.Log("plug on drop2");
             //Move to that waypoint position and drop
             isConnected = true;
             consoleController.isConnected = true;
@@ -62,7 +62,7 @@ public class PlugController : ClickableBase {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
         if(clockController != null) {
             hoveredClockController = clockController;
@@ -71,7 +71,7 @@ public class PlugController : ClickableBase {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         ClockController clockController = collision.gameObject.GetComponentInParent<ClockController>();
         if (clockController != null) {
             if(clockController == hoveredClockController) {

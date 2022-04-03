@@ -27,9 +27,11 @@ public class ClockController : MonoBehaviour
 
     public int daysLeft = 50;
 
-    public TextMeshProUGUI daysLeftText;
-    
+    public int hiddenDaysLeft = 50;
 
+    public TextMeshProUGUI daysLeftText;
+
+    public string name;
 
     public void minusDay() {
         daysLeft--;
@@ -39,11 +41,6 @@ public class ClockController : MonoBehaviour
     {
         daysLeft++;
     }
-
-
-
-
-    public string name;
 
     private void Start()
     {

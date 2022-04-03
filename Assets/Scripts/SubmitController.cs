@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScreenController : MonoBehaviour
+public class SubmitController : MonoBehaviour
 {
-
     public TextMeshProUGUI screenText;
 
+    // Start is called before the first frame update
     private void Start()
     {
         reset();
@@ -20,12 +20,8 @@ public class ScreenController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void appendText(string text)
+    public void updateValue(int number)
     {
-        if(screenText.text != "") {
-            //Append Carriage return
-            screenText.text += "<line-height=65%>\n\n</line-height>";
-        }
-        screenText.text += text;
+        screenText.text = "Submit ?\n" + number;
     }
 }
