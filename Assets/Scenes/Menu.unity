@@ -1036,6 +1036,13 @@ MonoBehaviour:
       Data3: -2050781308
       Data4: 816817572
     Path: event:/Music/MainMenuMusic
+  bgnoise:
+    Guid:
+      Data1: 1783454037
+      Data2: 1163846866
+      Data3: 347578536
+      Data4: 490461437
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_RANDOMOFFICE
 --- !u!4 &1952403601
 Transform:
   m_ObjectHideFlags: 0

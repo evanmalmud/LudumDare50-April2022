@@ -26,9 +26,6 @@ public class TimerController : MonoBehaviour
     {
         defaultTimer = gameStateManager.lengthOfLevel;
         reset();
-
-        distance = emptyWaypoint.localPosition - fullWaypoint.localPosition;
-        Debug.Log("DISTANCE" + distance);
     }
     // Update is called once per frame
     void Update()
@@ -50,10 +47,6 @@ public class TimerController : MonoBehaviour
     }
 
     public void updateTimer() {
-        ///float newy = fullWaypoint.localPosition.y - (distance.y / (int)defaultTimer) * (int)currentCount;
-        ///Vector2 newPos = new Vector2(timerBlock.transform.localPosition.x, newy);
-        ///timerBlock.transform.localPosition = newPos;
-
         timerText.text = ((int)currentCount).ToString();
     }
 }

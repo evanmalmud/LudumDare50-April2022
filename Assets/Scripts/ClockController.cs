@@ -1,3 +1,4 @@
+using PowerTools;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -33,6 +34,16 @@ public class ClockController : MonoBehaviour
 
     public string name;
 
+    public string nameWithColor;
+
+    public Color nameColor;
+
+    public GameStateManager gameStateManager;
+
+    public GameObject spirit;
+    public SpriteAnim spitirAnim;
+    public AnimationClip spirit_anim;
+
     public void minusDay() {
         daysLeft--;
     }
@@ -47,7 +58,7 @@ public class ClockController : MonoBehaviour
         bgSprite.SetActive(true);
         skullCenterSprite.SetActive(true);
         nameplateSprite.SetActive(true);
-
+        reset();
     }
 
     private void rotatePointers() {
@@ -71,6 +82,10 @@ public class ClockController : MonoBehaviour
         dead(isDead);
 
         daysLeftText.text = daysLeft.ToString();
+
+        if (hiddenDaysLeft <= 0) {
+            isDead = true;
+        }
     }
 
     void selected(bool isSelected)
@@ -90,6 +105,7 @@ public class ClockController : MonoBehaviour
     {
         if (isDead) {
             skullOverlaySprite.SetActive(true);
+            gameStateManager.plugStuck();
 
         } else {
             skullOverlaySprite.SetActive(false);
@@ -99,6 +115,33 @@ public class ClockController : MonoBehaviour
 
     public void setName(string name) {
         this.name = name;
-        namePlate.text = name;
+        nameWithColor = "<color=#" + ColorUtility.ToHtmlStringRGB(nameColor) + ">" + name + "</color>";
+        namePlate.text = nameWithColor;
+    }
+
+    public void reset()
+    {
+        isDead = false;
+        daysLeft = 1 + Random.Range(1, 15);
+        hiddenDaysLeft = daysLeft;
+        gameStateManager.plugUnStuck();
+    }
+
+
+    public void killClockPerson() {
+        //Play anim.
+        StartCoroutine(playSpritAnim());
+        //Get new name
+        setName(gameStateManager.getNewName());
+
+        reset();
+    }
+
+    IEnumerator playSpritAnim() {
+        spirit.SetActive(true);
+        spitirAnim.Play(spirit_anim);
+        yield return new WaitForSeconds(spirit_anim.length);
+        spirit.SetActive(false);
+        yield return null;
     }
 }

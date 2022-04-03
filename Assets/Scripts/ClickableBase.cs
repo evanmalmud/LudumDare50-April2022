@@ -6,7 +6,7 @@ public class ClickableBase : MonoBehaviour
 {
     public bool clickAndHeld = false;
 
-    public Transform lastGoodLocation;
+    public Vector3 lastGoodLocation;
 
     public Vector3 mouseMoveOffset;
 
@@ -14,7 +14,8 @@ public class ClickableBase : MonoBehaviour
 
     public void additionalStart()
     {
-        lastGoodLocation = transform;
+        lastGoodLocation = transform.position;
+        OnMouseExit();
     }
 
     public void additionalUpdate()
@@ -43,7 +44,7 @@ public class ClickableBase : MonoBehaviour
     public virtual bool onBadDrop()
     {
         clickAndHeld = false;
-        transform.position = lastGoodLocation.position;
+        transform.position = lastGoodLocation;
         return true;
     }
 

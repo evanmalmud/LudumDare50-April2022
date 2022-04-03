@@ -6,7 +6,9 @@ public class MusicHelper: MonoBehaviour
 {
 
     private FMOD.Studio.EventInstance instance;
+    private FMOD.Studio.EventInstance instance2;
     public FMODUnity.EventReference music;
+    public FMODUnity.EventReference bgnoise;
 
     private bool isPlaying = false;
 
@@ -14,10 +16,12 @@ public class MusicHelper: MonoBehaviour
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
+        instance2 = FMODUnity.RuntimeManager.CreateInstance(bgnoise);
     }
     public void startMusic()
     {
         instance.start();
+        instance2.start();
         isPlaying = true;
     }
 
@@ -25,6 +29,13 @@ public class MusicHelper: MonoBehaviour
     public void pauseMusic()
     {
         instance.setPaused(true);
+        instance2.setPaused(true);
+    }
+
+    public void unpauseMusic()
+    {
+        instance.setPaused(false);
+        instance2.setPaused(false);
     }
 
     void OnDestroy()
@@ -32,5 +43,6 @@ public class MusicHelper: MonoBehaviour
         //FMOD.Studio.Bus playerBus = FMODUnity.RuntimeManager.GetBus("bus:/Music");
         //playerBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
         instance.release();
+        instance2.release();
     }
 }

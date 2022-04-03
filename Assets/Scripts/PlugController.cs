@@ -9,26 +9,43 @@ public class PlugController : ClickableBase {
     public bool isConnected = false;
 
     public GameObject glowSprite;
+    public GameObject stuckSprite;
 
     public ConsoleController consoleController;
 
+    public bool isStuck = false;
+
     private void Start()
     {
+        reset();
         additionalStart();
     }
+
+    public void reset() {
+        isStuck = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(isConnected) {
+        if (isConnected && isStuck) {
+            stuckSprite.SetActive(true);
+            glowSprite.SetActive(false);
+        } else if(isConnected) {
             glowSprite.SetActive(true);
+            stuckSprite.SetActive(false);
         } else {
             glowSprite.SetActive(false);
+            stuckSprite.SetActive(false);
         }
         additionalUpdate();
     }
 
     public override bool onClick()
     {
+        if(isStuck) {
+            return false;
+        }
         //Debug.Log("plug on click");
         isConnected = false;
         consoleController.isConnected = false;

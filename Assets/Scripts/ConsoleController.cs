@@ -8,21 +8,31 @@ public class ConsoleController : MonoBehaviour
     public bool isConnected = false;
 
     public GameObject wifiSprite;
+    public GameObject wifiStuckSprite;
 
     public ClockController connectedClock;
 
     public GameObject plusPress;
     public GameObject minusPress;
 
+    public FMODUnity.EventReference clickEvent;
+
     public float timeToKeepPressedState = 5;
+
+    public bool isStuck = false;
 
 
     // Start is called before the first frame update
-    void connected(bool isConnected)
+    void connected()
     {
-        if(isConnected) {
+        if (isConnected && isStuck) {
+            wifiStuckSprite.SetActive(true);
+            wifiSprite.SetActive(false);
+        } else if (isConnected) {
+            wifiStuckSprite.SetActive(false);
             wifiSprite.SetActive(true);
         } else {
+            wifiStuckSprite.SetActive(false);
             wifiSprite.SetActive(false);
         }
         
@@ -31,13 +41,14 @@ public class ConsoleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        connected(isConnected);
+        connected();
     }
 
     public void onMinusClick() {
         if(connectedClock != null) {
             connectedClock.minusDay();
             StartCoroutine(playPress(minusPress));
+            FMODUnity.RuntimeManager.PlayOneShot(clickEvent, transform.position);
         }
     }
 
@@ -46,6 +57,7 @@ public class ConsoleController : MonoBehaviour
         if (connectedClock != null) {
             connectedClock.addDay();
             StartCoroutine(playPress(plusPress));
+            FMODUnity.RuntimeManager.PlayOneShot(clickEvent, transform.position);
         }
     }
 

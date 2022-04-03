@@ -27,7 +27,6 @@ public class GameStateManager : MonoBehaviour
     public ScreenController screenController;
 
     public SubmitController submitController;
-    public GameObject submitButton;
 
     string namesURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdIufOO1eAzR6q6xyL6-C7iUs_F1z70E2lwy8HfnUKN9Xnxv4POnEhoW12LPXikt1-o9GM7XHOul5p/pub?output=csv";
     string textLineURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoY4fC9mC8q7u-mY_lRBgqTEAwqxdIBhDBvHcX9Sd-D_8e_Fcp8QqH1LzvuBS0_1u-64VAuKlefmIc/pub?output=csv";
@@ -50,11 +49,16 @@ public class GameStateManager : MonoBehaviour
 
     public int roundCount = 1;
 
-    public int livesLeft = 3;
+    public LivesController livesController;
+
+    public PlugController plugController;
+
+    public ConsoleController consoleController;
 
     void Awake()
     {
-        submitButton.SetActive(false);
+        livesController.reset();
+        submitController.reset();
         //StartCoroutine(GetRequest(namesURL, names, namesCSV));
         //StartCoroutine(GetRequest(textLineURL, textLines, textLinesCSV));
         names = CSVReader.Read(namesCSV);
@@ -69,6 +73,17 @@ public class GameStateManager : MonoBehaviour
             names.RemoveAt(indexOfName);
         }
 
+    }
+
+    public string getNewName() {
+        if(names.Count <= 0) {
+            names = CSVReader.Read(namesCSV);
+        }
+        int indexOfName = Random.Range(0, names.Count);
+        string nameChosen = (string)names[indexOfName][namesColumn];
+        //Remove used name
+        names.RemoveAt(indexOfName);
+        return nameChosen;
     }
 
         // Update is called once per frame
@@ -93,7 +108,7 @@ public class GameStateManager : MonoBehaviour
 
 
                 //Pick random Text from list
-                string text = createTextLine(textIndex, actionValue, clocks[clockIndex].name);
+                string text = createTextLine(textIndex, actionValue, clocks[clockIndex].nameWithColor);
 
                 //Calc their hidden score
                 clocks[clockIndex].hiddenDaysLeft += actionValue;
@@ -106,7 +121,7 @@ public class GameStateManager : MonoBehaviour
         } else if (currentLengthOfLevel < lengthOfLevel + timeToPostLevel) {
             int timeLeft = (int)(lengthOfLevel + timeToPostLevel - currentLengthOfLevel);
             submitController.updateValue(timeLeft);
-            submitButton.SetActive(true);
+            submitController.showTicket();
         } else if (currentLengthOfLevel > lengthOfLevel + timeToPostLevel) {
             //Check Values and Reset
             submitted();
@@ -162,7 +177,7 @@ public class GameStateManager : MonoBehaviour
     }
 
     public void submitted() {
-        submitButton.SetActive(false);
+        submitController.reset();
         bool anyWrong = false;
         foreach(ClockController clock in clocks) {
             if(clock.hiddenDaysLeft != clock.daysLeft) {
@@ -172,15 +187,41 @@ public class GameStateManager : MonoBehaviour
         }
 
         currentLengthOfLevel = 0f;
-        submitButton.SetActive(false);
         screenController.reset();
         timerController.reset();
         roundCount++;
         if (anyWrong){
             Debug.LogError("SOME ANSWERS WRONG");
-            livesLeft--;
+            livesController.loseLife();
         } else {
             Debug.Log("ALL RIGHT!!!!");
         }
+    }
+
+    public void gameOver() {
+        //pause things and show game over screen
+
+        //On replay
+        Awake();
+    }
+
+    public void replay()
+    {
+        Awake();
+    }
+
+    public void plugStuck() {
+        //Turn plug red and disable moving
+        plugController.isStuck = true;
+        //turn controller red
+        consoleController.isStuck = true;
+    }
+
+    public void plugUnStuck()
+    {
+        //Turn plug blue and enable moving
+        plugController.isStuck = false;
+        //turn controller blue
+        consoleController.isStuck = false;
     }
 }
