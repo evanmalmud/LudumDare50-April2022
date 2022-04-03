@@ -3016,10 +3016,10 @@
 	</object>
 	<object class="MultiSound" id="{2c1c0adc-6a51-4964-824e-8455d3ed0f1a}">
 		<property name="start">
-			<value>36.441740495378724</value>
+			<value>28.245101001316598</value>
 		</property>
 		<property name="length">
-			<value>3.0370804847098416</value>
+			<value>7.1882174933738217</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{e7d3ff27-af61-4b87-8355-a70a5b664848}</destination>
