@@ -6,6 +6,13 @@ public class ClickableBase : MonoBehaviour
 {
     public bool clickAndHeld = false;
 
+    public Transform lastGoodLocation;
+
+    private void Start()
+    {
+        lastGoodLocation = transform;
+    }
+
     // Start is called before the first frame update
     public virtual bool onClick()
     {
@@ -16,6 +23,13 @@ public class ClickableBase : MonoBehaviour
     public virtual bool onDrop()
     {
         clickAndHeld = false;
+        return true;
+    }
+
+    public virtual bool onBadDrop()
+    {
+        clickAndHeld = false;
+        transform.position = lastGoodLocation.position;
         return true;
     }
 }

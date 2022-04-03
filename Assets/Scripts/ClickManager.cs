@@ -27,21 +27,24 @@ public class ClickManager : MonoBehaviour
         } else 
 
         //Click and we are holding something
-        if (Input.GetMouseButtonDown(0) && storedClickable != null) {
+        /*if (Input.GetMouseButtonDown(0) && storedClickable != null) {
             //Debug.Log("Mouse Drop");
             if (storedClickable.onDrop()) {
                 //Drop Success
                 storedClickable = null;
             }
-        }/* else 
+        } else */
 
         if (Input.GetMouseButtonUp(0) && storedClickable != null) {
             //Debug.Log("Mouse Drop");
             if (storedClickable.onDrop()) {
                 //Drop Success
                 storedClickable = null;
+            } else {
+                storedClickable.onBadDrop();
+                storedClickable = null;
             }
-        }*/
+        }
 
     }
 }

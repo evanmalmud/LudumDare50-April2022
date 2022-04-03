@@ -46,6 +46,8 @@ public class GameStateManager : MonoBehaviour
 
     public Vector2 minMaxActionValues;
 
+    public TimerController timerController;
+
     void Awake()
     {
         submitButton.SetActive(false);
@@ -168,6 +170,7 @@ public class GameStateManager : MonoBehaviour
         currentLengthOfLevel = 0f;
         submitButton.SetActive(false);
         screenController.reset();
+        timerController.reset();
 
         if (anyWrong){
             Debug.LogError("SOME ANSWERS WRONG");

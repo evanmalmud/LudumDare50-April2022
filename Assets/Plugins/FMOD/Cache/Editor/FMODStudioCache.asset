@@ -15,11 +15,92 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637842828524429523
+  lastModified: 637845889546631597
   FileSizes:
   - Name: Desktop
-    Value: 482
+    Value: 2944608
   Exists: 1
+--- !u!114 &-8924320285782732660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_BUTTONCLICK
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_BUTTONCLICK
+  Guid:
+    Data1: -338044115
+    Data2: 1323776917
+    Data3: -1865110383
+    Data4: -1793280801
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1257
+--- !u!114 &-5498164574235711872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_RANDOMOFFICE
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_RANDOMOFFICE
+  Guid:
+    Data1: 1783454037
+    Data2: 1163846866
+    Data3: 347578536
+    Data4: 490461437
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 268838
+--- !u!114 &-5063300984358651393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_PRINTTER
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_PRINTTER
+  Guid:
+    Data1: 490006227
+    Data2: 1110212301
+    Data3: -266014793
+    Data4: 1953928080
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6055
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,12 +121,15 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 1218974037034178766}
   - {fileID: 7634677601830865199}
+  - {fileID: -8924320285782732660}
+  - {fileID: -5498164574235711872}
+  - {fileID: -5063300984358651393}
   EditorParameters: []
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637842828533104564
+  cacheTime: 637845889546631597
   cacheVersion: 10
 --- !u!114 &534083046462047438
 MonoBehaviour:
@@ -62,10 +146,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637842828524409515
+  lastModified: 637845889523075300
   FileSizes:
   - Name: Desktop
-    Value: 1012
+    Value: 1036
   Exists: 1
 --- !u!114 &1218974037034178766
 MonoBehaviour:
@@ -91,8 +175,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &6130497663226308815
 MonoBehaviour:
@@ -109,10 +193,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637842828533104564
+  lastModified: 637845889532196246
   FileSizes:
   - Name: Desktop
-    Value: 858496
+    Value: 858560
   Exists: 1
 --- !u!114 &6138860964628047595
 MonoBehaviour:
@@ -129,10 +213,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637842828524419512
+  lastModified: 637845889523085306
   FileSizes:
   - Name: Desktop
-    Value: 902
+    Value: 1086
   Exists: 1
 --- !u!114 &7634677601830865199
 MonoBehaviour:
@@ -154,10 +238,10 @@ MonoBehaviour:
     Data4: 816817572
   Banks:
   - {fileID: 6130497663226308815}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0

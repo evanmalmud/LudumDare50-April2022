@@ -461,8 +461,8 @@ Transform:
   m_GameObject: {fileID: 6623260201046969079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6623260202015330543}
   - {fileID: 6623260201226245996}
@@ -587,7 +587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.686, y: 0.656}
+  m_AnchoredPosition: {x: 0.686, y: 0.402}
   m_SizeDelta: {x: 146.1788, y: 65.8173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6623260201226245986
@@ -840,6 +840,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6623260201477071669}
   - component: {fileID: 6623260201477071668}
+  - component: {fileID: 1134991528054656036}
+  - component: {fileID: 3764067989807806121}
   m_Layer: 0
   m_Name: Clocks_BG_Glow
   m_TagString: Untagged
@@ -903,7 +905,7 @@ SpriteRenderer:
   m_SortingLayerID: 956119253
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8f05407ac2bb2ff43844364e3e05f9ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae5f3306140321144876bda0a8d69834, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -914,6 +916,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1134991528054656036
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623260201477071670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3764067989807806121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623260201477071670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89a8ca009b14008429f621808bba2086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_defaultAnim: {fileID: 7400000, guid: 7d6157f7e5311c04c974da273fe1da2c, type: 2}
 --- !u!1 &6623260201495146085
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1016,7 @@ MonoBehaviour:
   isDead: 0
   rorateRatePerSecond: 1
   daysLeft: 50
+  hiddenDaysLeft: 50
   daysLeftText: {fileID: 6623260201226245987}
   name: Bruce2
 --- !u!1 &6623260201605654381
