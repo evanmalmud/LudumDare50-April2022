@@ -47,6 +47,9 @@ public class ClockController : MonoBehaviour
     FMOD.Studio.EventInstance instance;
     public FMODUnity.EventReference deathGhostEvent;
 
+    FMOD.Studio.EventInstance instance2;
+    public FMODUnity.EventReference deathEvent;
+
     public void minusDay() {
         daysLeft--;
     }
@@ -59,6 +62,7 @@ public class ClockController : MonoBehaviour
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(deathGhostEvent);
+        instance2 = FMODUnity.RuntimeManager.CreateInstance(deathEvent);
         bgSprite.SetActive(true);
         skullCenterSprite.SetActive(true);
         nameplateSprite.SetActive(true);
@@ -91,15 +95,17 @@ public class ClockController : MonoBehaviour
     void Update()
     {
         if (gameStateManager.gameActive) {
+            if (!isDead) {
+                if (hiddenDaysLeft <= 0) {
+                    instance2.start();
+                    isDead = true;
+                }
+            }
             rotatePointers();
             selected(isSelected);
             dead(isDead);
 
             daysLeftText.text = daysLeft.ToString();
-
-            if (hiddenDaysLeft <= 0) {
-                isDead = true;
-            }
         }
     }
 

@@ -734,7 +734,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0024032593, y: -1.0609298}
+  m_Offset: {x: -0.0024095774, y: -0.079111814}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -745,7 +745,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7830868, y: 0.56291676}
+  m_Size: {x: 2.100734, y: 2.8923283}
   m_EdgeRadius: 0
 --- !u!114 &4474292928212049011
 MonoBehaviour:
@@ -1049,6 +1049,13 @@ MonoBehaviour:
       Data3: 1051518124
       Data4: 1114230992
     Path: event:/SFX/LD50_SFX_DD/LD_SFX_GHOST
+  deathEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &6623260201605654381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1406,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0068131685, y: 0.32380438}
+  m_Offset: {x: 0.0009834766, y: 0.024720192}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1410,7 +1417,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0917857, y: 2.09759}
+  m_Size: {x: 2.1734037, y: 2.6957583}
   m_EdgeRadius: 0
 --- !u!114 &8335970024946017003
 MonoBehaviour:

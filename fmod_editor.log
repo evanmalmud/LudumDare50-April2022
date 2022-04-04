@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000019B34C82618 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000019C643D3068 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,8 +17,259 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] SystemI::createSound                     : filename = FMOD/Ludum50/Build/Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0000019AE6EB5C88 : node = 0000019C1708A8A0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000019C170D3248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000019AE6EB5C88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Ludum50/Build/Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1620864
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000019C1708A9B0
+[LOG] SystemI::createSound                     :     filename = FMOD/Ludum50/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 0000019AE6EB5418 : node = 0000019C1708A4E0
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 0000019C170D3248.  list count = 0
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='LD50-Level1', format=5, channels=2, frequency=48000, lengthbytes=464768, lengthpcm=1920000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.482239.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000019AE6EB5C88
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000019AE6EB5418
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Ludum50/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3007808
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 229888
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000019C1708A5F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='OFFICE TONE', format=5, channels=2, frequency=48000, lengthbytes=1230816, lengthpcm=4534655, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.265617.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000019AE6EB5418
+[LOG] SystemI::createSound                     : filename = FMOD/Ludum50/Build/Desktop/DX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000019C4E1BC248 : node = 0000019C3D816DC0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000019C170D3248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000019C4E1BC248
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Ludum50/Build/Desktop/DX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1721888
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 41344
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000019C3D816ED0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='LD_DX_001_IntroAnnouncement', format=5, channels=1, frequency=48000, lengthbytes=333280, lengthpcm=2346554, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.463935.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000019C4E1BC248
+[LOG] SystemI::createSound                     : filename = FMOD/Ludum50/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000019B334598F8 : node = 0000019C16FC17B0
+[LOG] SystemI::createSound                     : add node to async list : head = 0000019C170D3248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000019B334598F8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Ludum50/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3007808
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 229888
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000019C16FC18C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MORE BEEPS', format=5, channels=2, frequency=48000, lengthbytes=127296, lengthpcm=497775, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000019B334598F8
+[LOG] SoundI::release                          : MORE BEEPS (0000019B334598F8)
+[LOG] SoundI::release                          :     MORE BEEPS (0000019AE679C4F8)
+[LOG] SoundI::release                          :     MORE BEEPS (0000019C163C1298)
+[LOG] SystemI::createSound                     : filename = FMOD/Ludum50/Build/Desktop/DX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000019C163C10E8 : node = 0000019B3B306A10
+[LOG] SystemI::createSound                     : add node to async list : head = 0000019C170D3248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000019C163C10E8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/Ludum50/Build/Desktop/DX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1721888
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 41344
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000019B3B306B20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='LD_DX_510_ConvoCas_DidYouSeeThatMemo', format=5, channels=1, frequency=48000, lengthbytes=99712, lengthpcm=513856, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.686336.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000019C163C10E8
+[LOG] SoundI::release                          :  (0000019C12515B78)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-002 (0000019C3D8A26F8)
+[LOG] SoundI::release                          :  (0000019C1643CD68)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-006 (0000019C12C353D8)
+[LOG] SoundI::release                          :  (0000019C4EC80368)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-007 (0000019C4F34E158)
+[LOG] SoundI::release                          :  (0000019C12515E58)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-003 (0000019C5BAF5218)
+[LOG] SoundI::release                          :  (0000019C4EC7FF18)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-004 (0000019C4F34EE58)
+[LOG] SoundI::release                          :  (0000019C12515FC8)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-005 (0000019C12C365B8)
+[LOG] SoundI::release                          :  (0000019C1643CBF8)
+[LOG] SoundI::release                          :     LD_SFX_COMPUTERMESSAGE-001 (0000019C12AE0A48)
+[LOG] SoundI::release                          :  (0000019C5146E4D8)
+[LOG] SoundI::release                          :     LD50-DeathStinger (0000019C4E717DC8)
+[LOG] SoundI::release                          :  (0000019C63DF8448)
+[LOG] SoundI::release                          :     Bells, Doorbell, Classic, Electric, Ringing, Short SND45594 4 (0000019C64CAC428)
+[LOG] SoundI::release                          :  (0000019B32BD2C18)
+[LOG] SoundI::release                          :     Bells, Doorbell, Classic, Electric, Ringing, Long SND45595 2 (0000019C4C2060A8)
+[LOG] SoundI::release                          :  (0000019C1643C918)
+[LOG] SoundI::release                          :     Bells, Doorbell, Classic, Electric, Ringing, Long SND45595 1 (0000019C12ADF528)
+[LOG] SoundI::release                          :  (0000019C63DF8728)
+[LOG] SoundI::release                          :     PHONE RING-001 (0000019C64B0D3E8)
+[LOG] SoundI::release                          :  (0000019C1643C1E8)
+[LOG] SoundI::release                          :     PHONE RING-002 (0000019C12C35F38)
+[LOG] SoundI::release                          :  (0000019C4EC80648)
+[LOG] SoundI::release                          :     NEON-004 (0000019C3D8A2558)
+[LOG] SoundI::release                          :  (0000019C63DF8B78)
+[LOG] SoundI::release                          :     NEON-005 (0000019C64CACAA8)
+[LOG] SoundI::release                          :  (0000019C12515A08)
+[LOG] SoundI::release                          :     Bells, Doorbell, Classic, Electric, Ringing, Short SND45594 1 (0000019C5BAF5D78)
+[LOG] SoundI::release                          :  (0000019C4EC80088)
+[LOG] SoundI::release                          :     DOOR-006 (0000019C4F34E7D8)
+[LOG] SoundI::release                          :  (0000019C125162A8)
+[LOG] SoundI::release                          :     DOOR-001 (0000019C12C368F8)
+[LOG] SoundI::release                          :  (0000019B5FC280F8)
+[LOG] SoundI::release                          :     DOOR-002 (0000019C12513738)
+[LOG] SoundI::release                          :  (0000019B5FC27F88)
+[LOG] SoundI::release                          :     DOOR-003 (0000019C48F4E8C8)
+[LOG] SoundI::release                          :  (0000019C1643C358)
+[LOG] SoundI::release                          :     DOOR-007 (0000019C12ADF388)
+[LOG] SoundI::release                          :  (0000019B3558A838)
+[LOG] SoundI::release                          :     DOOR-008 (0000019C48F4E3E8)
+[LOG] SoundI::release                          :  (0000019B35C6ABF8)
+[LOG] SoundI::release                          :     DOOR-004 (0000019C12AE0D88)
+[LOG] SoundI::release                          :  (0000019C1643C638)
+[LOG] SoundI::release                          :     DOOR-005 (0000019C12C35098)
+[LOG] SoundI::release                          :  (0000019B3558A6C8)
+[LOG] SoundI::release                          :     LD50_SFX_BLAH-003 (0000019C64B0D0A8)
+[LOG] SoundI::release                          :  (0000019B32BD2AA8)
+[LOG] SoundI::release                          :     LD50_SFX_BLAH-001 (0000019C4C206728)
+[LOG] SoundI::release                          :  (0000019B3558ADF8)
+[LOG] SoundI::release                          :     LD50_SFX_BLAH-004 (0000019C48F4EDA8)
+[LOG] SoundI::release                          :  (0000019B32BD2D88)
+[LOG] SoundI::release                          :     LD50_SFX_BLAH-002 (0000019B3B5615D8)
+[LOG] SoundI::release                          :  (0000019B3558A3E8)
+[LOG] SoundI::release                          :     FOOTSTEPS-002 (0000019C64B0DA68)
+[LOG] SoundI::release                          :  (0000019B32BD24E8)
+[LOG] SoundI::release                          :     Bells, Doorbell, Classic, Electric, Ringing, Short SND45594 2 (0000019C51B26F78)
+[LOG] SoundI::release                          :  (0000019C63DF8A08)
+[LOG] SoundI::release                          :     BUTTON BEEP (0000019C51B275F8)
+[LOG] SoundI::release                          :  (0000019B3558A108)
+[LOG] SoundI::release                          :     KEYBOARD-003 (0000019C48F4E248)
+[LOG] SoundI::release                          :  (0000019B32BD2658)
+[LOG] SoundI::release                          :     KEYBOARD-006 (0000019C51B26DD8)
+[LOG] SoundI::release                          :  (0000019C63DF85B8)
+[LOG] SoundI::release                          :     KEYBOARD-007 (0000019C64CACC48)
+[LOG] SoundI::release                          :  (0000019C4EC804D8)
+[LOG] SoundI::release                          :     KEYBOARD-004 (0000019C3D8A2A38)
+[LOG] SoundI::release                          :  (0000019C125155B8)
+[LOG] SoundI::release                          :     KEYBOARD-005 (0000019C12C36758)
+[LOG] SoundI::release                          :  (0000019C1643C078)
+[LOG] SoundI::release                          :     KEYBOARD-001 (0000019C12ADFBA8)
+[LOG] SoundI::release                          :  (0000019C63DF8168)
+[LOG] SoundI::release                          :     KEYBOARD-002 (0000019C64CACDE8)
+[LOG] SoundI::release                          :  (0000019B5FC28268)
+[LOG] SoundI::release                          :     LD_SFX_PLUGIN-003 (0000019C125138D8)
+[LOG] SoundI::release                          :  (0000019C63DF82D8)
+[LOG] SoundI::release                          :     LD_SFX_PLUGIN-004 (0000019C64CAC288)
+[LOG] SoundI::release                          :  (0000019C12515CE8)
+[LOG] SoundI::release                          :     LD_SFX_PLUGIN-001 (0000019C5BAF5078)
+[LOG] SoundI::release                          :  (0000019B3558AC88)
+[LOG] SoundI::release                          :     LD_SFX_PLUGIN-002 (0000019C48F4EC08)
+[LOG] SoundI::release                          :  (0000019C12515728)
+[LOG] SoundI::release                          :     LD50_SFX_BUTTONPRESS-003 (0000019C12C36418)
+[LOG] SoundI::release                          :  (0000019C12516138)
+[LOG] SoundI::release                          :     LD50_SFX_BUTTONPRESS-001 (0000019C5BAF5BD8)
+[LOG] SoundI::release                          :  (0000019C4EC7FC38)
+[LOG] SoundI::release                          :     LD50_SFX_BUTTONPRESS-002 (0000019C4F34E2F8)
+[LOG] SoundI::release                          :  (0000019C1643CA88)
+[LOG] SoundI::release                          :     LD_SFX_HEALTHLOST (0000019C12ADFD48)
+[LOG] SoundI::release                          :  (0000019B35C6A7A8)
+[LOG] SoundI::release                          :     LD_DX_701_Callouts_HeadedDownToRecords (0000019C12ADF1E8)
+[LOG] SoundI::release                          :  (0000019B605D32B8)
+[LOG] SoundI::release                          :     LD_DX_201_Supervisor_MeetingInFive (0000019B390413E8)
+[LOG] SoundI::release                          :  (0000019B35C6AD68)
+[LOG] SoundI::release                          :     LD_DX_202_Supervisor_YouveGotAKnack (0000019C12AE0F28)
+[LOG] SoundI::release                          :  (0000019B605D3708)
+[LOG] SoundI::release                          :     LD_DX_203_Supervisor_ElevenClocks (0000019B39041F48)
+[LOG] SoundI::release                          :  (0000019B35C6A918)
+[LOG] SoundI::release                          :     LD_DX_204_Supervisor_WhileWereYoung (0000019C12ADF868)
+[LOG] SoundI::release                          :  (0000019B605D3428)
+[LOG] SoundI::release                          :     LD_DX_205_Supervisor_WorkYourselfToDeath (0000019B39040D68)
+[LOG] SoundI::release                          :  (0000019B605D3148)
+[LOG] SoundI::release                          :     LD_DX_206_Supervisor_ThatWouldBeGreat (0000019C4E7163C8)
+[LOG] SoundI::release                          :  (0000019B605D3598)
+[LOG] SoundI::release                          :     LD_DX_207_Supervisor_DontBoneMe (0000019B39042428)
+[LOG] SoundI::release                          :  (0000019B35C6AA88)
+[LOG] SoundI::release                          :     LD_DX_601_Paging_SupervisorToTorture (0000019B39040A28)
+[LOG] SoundI::release                          :  (0000019B35C6A358)
+[LOG] SoundI::release                          :     LD_DX_602_Paging_NearDeathStandby (0000019B39041A68)
+[LOG] SoundI::release                          :  (0000019B35C6A4C8)
+[LOG] SoundI::release                          :     LD_DX_302_Gossip_IfIMessedUpAClock (0000019B39040888)
+[LOG] SoundI::release                          :  (0000019B35C6A638)
+[LOG] SoundI::release                          :     LD_DX_302_Gossip_HeHadTheAudacity (0000019B39042288)
+[LOG] SoundI::release                          :  (0000019B35C6A1E8)
+[LOG] SoundI::release                          :     LD_DX_101_Dispatch_1144on12thStreet (0000019B39041728)
+[LOG] SoundI::release                          :  (0000019B35C6A078)
+[LOG] SoundI::release                          :     LD_DX_104_Dispatch_807BStreet (0000019C12AE0708)
+[LOG] SoundI::release                          : LD_DX_001_IntroAnnouncement (0000019C4E1BC248)
+[LOG] SoundI::release                          :     LD_DX_001_IntroAnnouncement (0000019B6018A778)
+[LOG] SoundI::release                          :     LD_DX_001_IntroAnnouncement (0000019C6421B858)
+[LOG] SoundI::release                          : OFFICE TONE (0000019AE6EB5418)
+[LOG] SoundI::release                          :     OFFICE TONE (0000019C12512728)
+[LOG] SoundI::release                          :     OFFICE TONE (0000019B33459598)
+[LOG] SoundI::release                          : LD_DX_510_ConvoCas_DidYouSeeThatMemo (0000019C163C10E8)
+[LOG] SoundI::release                          :     LD_DX_510_ConvoCas_DidYouSeeThatMemo (0000019B5FFB2D78)
+[LOG] SoundI::release                          :     LD_DX_510_ConvoCas_DidYouSeeThatMemo (0000019AE6EB50B8)
+[LOG] SoundI::release                          : LD50-Level1 (0000019AE6EB5C88)
+[LOG] SoundI::release                          :     LD50-Level1 (0000019B6018C2D8)
+[LOG] SoundI::release                          :     LD50-Level1 (0000019B334593E8)
+[LOG] SoundI::release                          :  (0000019C4EC7FDA8)
+[LOG] SoundI::release                          :     UI Notification Digital Incoming Message (0000019C12513DB8)
+[LOG] SoundI::release                          :  (0000019C4EC801F8)
+[LOG] SoundI::release                          :     LD_SFX_TOOLPICKUP (0000019C4F34E498)
+[LOG] SoundI::release                          :  (0000019B32BD2378)
+[LOG] SoundI::release                          :     LD50_SFX_PRINTER (0000019C4C206C08)
+[LOG] SoundI::release                          :  (0000019B3558A558)
+[LOG] SoundI::release                          :     LD_SFX_NEON (0000019C64B0D588)
+[LOG] SoundI::release                          :  (0000019C1643C4C8)
+[LOG] SoundI::release                          :     LD_SFX_SCYTHE (0000019C12C36C38)
+[LOG] SoundI::release                          :  (0000019B32BD2098)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-003 (0000019C4C206588)
+[LOG] SoundI::release                          :  (0000019C1643C7A8)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-004 (0000019C12C35578)
+[LOG] SoundI::release                          :  (0000019C12515898)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-001 (0000019C5BAF5898)
+[LOG] SoundI::release                          :  (0000019C63DF7FF8)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-002 (0000019C51B27AD8)
+[LOG] SoundI::release                          :  (0000019C4EC7F958)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-005 (0000019C3D8A2D78)
+[LOG] SoundI::release                          :  (0000019C4EC7FAC8)
+[LOG] SoundI::release                          :     LD_SFX_GHOST-006 (0000019C125140F8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -26,3 +277,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

@@ -66,6 +66,8 @@ public class GameStateManager : MonoBehaviour
     FMOD.Studio.EventInstance instanceGoodSubmit;
     public FMODUnity.EventReference goodSubmitEvent;
 
+    public MusicHelper musicHelper;
+
     //FMOD.Studio.EventInstance instanceBadSubmit;
     //public FMODUnity.EventReference badSubmitEvent;
 
@@ -138,7 +140,7 @@ public class GameStateManager : MonoBehaviour
     void levelScalling() {
         lengthOfLevel++;
 
-        if(roundCount % 4 == 0) {
+        if(roundCount % 2 == 0) {
             minMaxNewText = minMaxNewText / 1.1f;
         }
 
@@ -282,6 +284,7 @@ public class GameStateManager : MonoBehaviour
 
     public void gameOver() {
         gameover = true;
+        musicHelper.setGameOver(1);
         gameActive = false;
         //pause things and show game over screen
         gameOverController.enableGameOver(roundCount);
@@ -289,6 +292,7 @@ public class GameStateManager : MonoBehaviour
 
     public void replay()
     {
+        musicHelper.setGameOver(0);
         gameActive = true;
         reset();
     }
