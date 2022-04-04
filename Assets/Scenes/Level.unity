@@ -2323,7 +2323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1208311909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,8 +3133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c956a3b76c150f438010000605dca4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namesCSV: {fileID: 4900000, guid: 97f1dc668752b984eb28ea2a32bd97e0, type: 3}
-  textLinesCSV: {fileID: 4900000, guid: ad84f9fd16ad73a4db2e643c544cf041, type: 3}
+  namesCSV: {fileID: 4900000, guid: 9e0b8ed732d5c414b980f3298688e45e, type: 3}
+  textLinesCSV: {fileID: 4900000, guid: a94e5ec18ef500645a7b1919a5bd4314, type: 3}
   clocks:
   - {fileID: 1781326121}
   - {fileID: 1061287650}
@@ -3222,6 +3222,13 @@ MonoBehaviour:
       Data3: -14260811
       Data4: 1268337568
     Path: event:/Dialogue/LD_DX_INTRO
+  fmodDialogueEvent:
+    Guid:
+      Data1: -864138113
+      Data2: 1328357764
+      Data3: 403013263
+      Data4: -1053265965
+    Path: event:/Dialogue/LD_DX_DIALOGUELOOP
   lengthOfIntro: 48
   gameStateManager: {fileID: 1506226329}
   mainMenu: {fileID: 6234324802873638671}
@@ -3240,11 +3247,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   music:
     Guid:
-      Data1: 1074637579
-      Data2: 1180267173
-      Data3: 1848949403
-      Data4: -2062052028
-    Path: event:/Music/LevelMusic
+      Data1: -981895911
+      Data2: 1142204760
+      Data3: -547847279
+      Data4: 696516912
+    Path: event:/Music/Alexa's Music
   bgnoise:
     Guid:
       Data1: 1783454037
@@ -3761,7 +3768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 190, y: -98}
+  m_AnchoredPosition: {x: 454, y: 74}
   m_SizeDelta: {x: 1062, y: 755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1593574626
@@ -4286,7 +4293,7 @@ GameObject:
   - component: {fileID: 1862606491}
   - component: {fileID: 1862606490}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4309,8 +4316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 318, y: -43}
-  m_SizeDelta: {x: 843.27, y: 1071.47}
+  m_AnchoredPosition: {x: 551, y: -46}
+  m_SizeDelta: {x: 1054.01, y: 1339.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862606490
 MonoBehaviour:
@@ -4342,7 +4349,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: f63f92ffd6f4a444d8d5f5662c774f4a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: b9212da3c7b004d47a27134c22809017, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4508,8 +4515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 260, y: -96}
-  m_SizeDelta: {x: 1068.9, y: 1420.1}
+  m_AnchoredPosition: {x: 441, y: -102}
+  m_SizeDelta: {x: 1243.39, y: 1651.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912900012
 MonoBehaviour:
@@ -5820,7 +5827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6234324803968443064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5973,7 +5980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6234324804262566922
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -70,7 +70,7 @@ public class ClockController : MonoBehaviour
         Vector3 newRotPointer2 = new Vector3();
         newRotPointer2.z -= (Random.Range(1, 10) * 360 * .1f) / 12;
         pointers2.transform.Rotate(newRotPointer2);
-
+        rorateRatePerSecond = Random.Range(.2f, 1f);
         reset();
     }
 

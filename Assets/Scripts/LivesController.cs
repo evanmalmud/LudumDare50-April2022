@@ -35,7 +35,7 @@ public class LivesController : MonoBehaviour
         instance.start();
         lives[livesCount - 1].swapSprite(false);
         livesCount--;
-        if (livesCount <= 1) {
+        if (livesCount <= 0) {
             gameStateManager.gameOver();
         }
     }
