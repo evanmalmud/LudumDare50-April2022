@@ -7,10 +7,12 @@ public class MusicHelper: MonoBehaviour
 
     public FMOD.Studio.EventInstance instance;
     public FMOD.Studio.EventInstance instance2;
+    public FMOD.Studio.EventInstance instance3;
     public FMODUnity.EventReference music;
     public FMODUnity.EventReference bgnoise;
-
+    public FMODUnity.EventReference neon;
     public GameStateManager gameStateManager;
+    public logoNeonHandler neonHandler;
 
     public bool isPlaying = false;
 
@@ -19,6 +21,7 @@ public class MusicHelper: MonoBehaviour
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance2 = FMODUnity.RuntimeManager.CreateInstance(bgnoise);
+        instance3 = FMODUnity.RuntimeManager.CreateInstance(neon);
     }
 
     private void Update()
@@ -32,10 +35,17 @@ public class MusicHelper: MonoBehaviour
             instance.setParameterByName("Death", gameStateManager.gameover ? 1 : 0);
         }
     }
+
+    public void stopNeon() {
+        instance3.setPaused(true);
+    }
+
     public void startMusic()
     {
         instance.start();
         instance2.start();
+        instance3.start();
+        neonHandler.playClip();
         isPlaying = true;
     }
 
