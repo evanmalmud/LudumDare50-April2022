@@ -962,8 +962,11 @@
 		<property name="density">
 			<value>82.5</value>
 		</property>
+		<property name="earlyLateMix">
+			<value>17</value>
+		</property>
 		<property name="wetLevel">
-			<value>-24.5</value>
+			<value>-22</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{d5949515-49fd-4cdb-b47e-28963efb79de}" />
@@ -1081,7 +1084,7 @@
 	</object>
 	<object class="SFXReverbEffect" id="{742163a4-c54e-4ed8-8b5c-9d70b8a2ddba}">
 		<property name="decayTime">
-			<value>150</value>
+			<value>120</value>
 		</property>
 		<property name="earlyDelay">
 			<value>26</value>
@@ -1090,16 +1093,16 @@
 			<value>47</value>
 		</property>
 		<property name="diffusion">
-			<value>81</value>
+			<value>83</value>
 		</property>
 		<property name="density">
 			<value>85</value>
 		</property>
 		<property name="earlyLateMix">
-			<value>27</value>
+			<value>39</value>
 		</property>
 		<property name="wetLevel">
-			<value>-11.5</value>
+			<value>-15</value>
 		</property>
 		<property name="dryLevel">
 			<value>-3</value>
@@ -1139,10 +1142,13 @@
 	<object class="CompressorEffect" id="{a586886a-c40d-4307-8e9f-9454416fd8d9}" />
 	<object class="SFXReverbEffect" id="{1bc677b4-832a-4f80-bbe2-251231a9e7e6}">
 		<property name="decayTime">
-			<value>400</value>
+			<value>240</value>
 		</property>
 		<property name="diffusion">
 			<value>37</value>
+		</property>
+		<property name="dryLevel">
+			<value>-2.5</value>
 		</property>
 	</object>
 	<object class="ThreeEQEffect" id="{51aabdba-178f-4eb7-8a57-0275259bbff6}">
