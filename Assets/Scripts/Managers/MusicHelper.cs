@@ -12,7 +12,7 @@ public class MusicHelper: MonoBehaviour
 
     public GameStateManager gameStateManager;
 
-    private bool isPlaying = false;
+    public bool isPlaying = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -22,9 +22,11 @@ public class MusicHelper: MonoBehaviour
     }
 
     private void Update()
-    {   
-        if(isPlaying)
+    {
+        if (isPlaying) {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", gameStateManager.roundCount);
+            instance.setParameterByName("RoundCount", gameStateManager.roundCount);
+        }
     }
     public void startMusic()
     {

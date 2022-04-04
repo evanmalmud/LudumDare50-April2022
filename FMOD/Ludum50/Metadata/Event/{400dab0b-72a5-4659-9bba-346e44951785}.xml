@@ -194,6 +194,9 @@
 		<property name="length">
 			<value>40</value>
 		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
+		</property>
 		<relationship name="timeline">
 			<destination>{644fbbbb-1ccb-4a7d-9640-aa631490506d}</destination>
 		</relationship>
@@ -251,6 +254,9 @@
 		<property name="length">
 			<value>32</value>
 		</property>
+		<property name="quantizationInterval">
+			<value>2</value>
+		</property>
 		<relationship name="timeline">
 			<destination>{644fbbbb-1ccb-4a7d-9640-aa631490506d}</destination>
 		</relationship>
@@ -307,24 +313,24 @@
 	</object>
 	<object class="ParameterCondition" id="{d955edcd-95a4-4e38-968f-9de3e5a9c074}">
 		<property name="minimum">
-			<value>0</value>
+			<value>4</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>100</value>
 		</property>
 		<relationship name="parameter">
-			<destination>{1ebd7ded-8b42-4029-bf78-949ec61939a0}</destination>
+			<destination>{3d68c028-3390-4dea-abb0-e515417e84b3}</destination>
 		</relationship>
 	</object>
 	<object class="ParameterCondition" id="{398b5748-21a5-48e0-b38c-5e61ee9a003c}">
 		<property name="minimum">
-			<value>4</value>
+			<value>8</value>
 		</property>
 		<property name="maximum">
-			<value>7</value>
+			<value>100</value>
 		</property>
 		<relationship name="parameter">
-			<destination>{1ebd7ded-8b42-4029-bf78-949ec61939a0}</destination>
+			<destination>{3d68c028-3390-4dea-abb0-e515417e84b3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{8723d159-b7f2-4cea-bc1c-a3ddb1d054d3}" />
