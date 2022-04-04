@@ -44,6 +44,14 @@ public class ScytheController : ClickableBase {
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        ClockDeathCollider clockDeath = collision.gameObject.GetComponent<ClockDeathCollider>();
+        if (clockDeath != null) {
+            hoveredClockController = clockDeath.clockController;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //Debug.Log(collision.gameObject.name);

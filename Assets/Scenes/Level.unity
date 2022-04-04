@@ -2049,9 +2049,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
         type: 3}
+      propertyPath: deathEvent.Path
+      value: event:/SFX/LD50_SFX_DD/LD_SFX_DEATH
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
+        type: 3}
       propertyPath: gameStateManager
       value: 
       objectReference: {fileID: 1506226329}
+    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
+        type: 3}
+      propertyPath: deathEvent.Guid.Data1
+      value: 1205324261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
+        type: 3}
+      propertyPath: deathEvent.Guid.Data2
+      value: 1286454204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
+        type: 3}
+      propertyPath: deathEvent.Guid.Data3
+      value: 631051414
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
+        type: 3}
+      propertyPath: deathEvent.Guid.Data4
+      value: -995253773
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b78cca07814f54f49925091a800872dd, type: 3}
 --- !u!1 &1116488481
@@ -2922,6 +2947,89 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4717508274939181993, guid: e083f7c66112b904b8c7ca27c4ef290e,
+        type: 3}
+      propertyPath: m_text
+      value: 'BRUCE CAN SUCK IT sdsdddddddsdddsdsdsdsdsdddsd <word>(-2)</word>
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)<line-height=65%>\n\n</line-height>BRUCE MADE A
+        KALE SMOOTHIddddddddddddddddddddddddddddddEwww3 <color="red">(+2)</color>
+
+        BRUCE
+        MADE A KALEBRUCE MADE A KALEBRUCE MADg <color="red">-2</color>
+
+        BRUCE
+        MADE A KALE SMOOTHI
+
+        \n\n\n\n\n\n\n
+
+
+        BRUCE CAN SUCK IT (-2)
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE
+        CAN SUCK IT (-2)
+
+
+        BRUCE MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)
+
+
+
+
+        BRUCE CAN SUCK IT (-2)
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE MADE A KALE SMOOTHIE (+2)
+
+
+
+
+
+        BRUCE
+        CAN SUCK IT (-2)
+
+
+        BRUCE MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)
+
+
+
+
+
+        BRUCE CAN SUCK IT (-2)
+
+
+        BRUCE
+        MADE A KALE SMOOTHIE (+2)
+
+
+        BRUCE MADE A KALE SMOOTHIE (+2)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717508274939181993, guid: e083f7c66112b904b8c7ca27c4ef290e,
+        type: 3}
+      propertyPath: m_horizontalMapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4717508276023358369, guid: e083f7c66112b904b8c7ca27c4ef290e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3306,6 +3414,13 @@ MonoBehaviour:
       Data3: 403013263
       Data4: -1053265965
     Path: event:/Dialogue/LD_DX_DIALOGUELOOP
+  humphEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   lengthOfIntro: 48
   gameStateManager: {fileID: 1506226329}
   mainMenu: {fileID: 6234324802873638671}

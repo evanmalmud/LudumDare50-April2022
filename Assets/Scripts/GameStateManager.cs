@@ -88,6 +88,15 @@ public class GameStateManager : MonoBehaviour
         reset();
     }
 
+    public void activeAfterIntro() {
+        gameActive = true;
+
+        foreach (ClockController clock in clocks) {
+            clock.daysLeft = clock.hiddenDaysLeft;
+        }
+
+    }
+
     public void reset()
     {
         lengthOfLevel = defaultLengthOfLevel;
@@ -247,14 +256,14 @@ public class GameStateManager : MonoBehaviour
         textLine = textLine.Replace("NAME", name);
 
         if(value > 0) {
-            textLine += " <color=\"green\">(+";
+            textLine += " <nobr><color=\"green\">(+";
             textLine += value;
-            textLine += ")</color>";
+            textLine += ")</color></nobr>";
 
         } else {
-            textLine += " <color=\"red\">(";
+            textLine += " <nobr><color=\"red\">(";
             textLine += value;
-            textLine += ")</color>";
+            textLine += ")</color></nobr>";
         }
         return textLine;
     }

@@ -58,6 +58,7 @@ public class PlugController : ClickableBase {
         consoleController.connectedClock = null;
         if (hoveredClockController != null) {
             hoveredClockController.isSelected = false;
+
         }
         clickAndHeld = true;
         return base.onClick();
@@ -83,15 +84,23 @@ public class PlugController : ClickableBase {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(isConnected) 
+        { 
+            return; 
+        }
         ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
         if(clockPlug != null) {
             //Debug.Log("Enter " + collision.gameObject.name + clockPlug.clockController.name);
             hoveredClockController = clockPlug.clockController;
+
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (isConnected) {
+            return;
+        }
         ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
         if (clockPlug != null) {
             if (clockPlug.clockController != hoveredClockController) {
@@ -102,10 +111,14 @@ public class PlugController : ClickableBase {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (isConnected) {
+            return;
+        }
         ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
         if (clockPlug != null) {
             //Debug.Log("Exit " + collision.gameObject.name + clockPlug.clockController.name);
             if (clockPlug.clockController == hoveredClockController) {
+                hoveredClockController.isSelected = false;
                 hoveredClockController = null;
             }
         }

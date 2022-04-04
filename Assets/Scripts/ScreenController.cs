@@ -23,6 +23,10 @@ public class ScreenController : MonoBehaviour
         screenText.text = "";
     }
 
+    public void replaceNameStrike(string name) {
+        screenText.text.Replace(name, "<s>" + name + "</s>");
+    }
+
     // Update is called once per frame
     public void appendText(string text)
     {

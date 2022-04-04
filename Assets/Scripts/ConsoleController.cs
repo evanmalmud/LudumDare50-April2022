@@ -48,6 +48,14 @@ public class ConsoleController : MonoBehaviour
     void Update()
     {
         connected();
+
+        if (isConnected) {
+            if (Input.GetKeyDown(KeyCode.A)) {
+                onPlusClick();
+            } else if (Input.GetKeyDown(KeyCode.D)) {
+                onMinusClick();
+            }   
+        }
     }
 
     public void onMinusClick() {

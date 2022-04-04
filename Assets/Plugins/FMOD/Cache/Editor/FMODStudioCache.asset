@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637846720658275419
+  lastModified: 637846747208297410
   FileSizes:
   - Name: Desktop
-    Value: 3237696
+    Value: 3365216
   Exists: 1
 --- !u!114 &-8969923714838388128
 MonoBehaviour:
@@ -436,7 +436,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/DX.bank
   Name: DX
   StudioPath: bank:/DX
-  lastModified: 637846720654665020
+  lastModified: 637846747204467673
   FileSizes:
   - Name: Desktop
     Value: 1763232
@@ -659,13 +659,14 @@ MonoBehaviour:
   - {fileID: 2673980950587612385}
   - {fileID: 6571289428490531550}
   - {fileID: -8969923714838388128}
+  - {fileID: 6132821863433506254}
   EditorParameters:
   - {fileID: 635303644047717143}
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637846720658275419
+  cacheTime: 637846747208297410
   cacheVersion: 10
 --- !u!114 &32124726179538313
 MonoBehaviour:
@@ -763,7 +764,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637846720654695049
+  lastModified: 637846747204497693
   FileSizes:
   - Name: Desktop
     Value: 1672
@@ -1104,11 +1105,38 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637846720654915248
+  lastModified: 637846747204948111
   FileSizes:
   - Name: Desktop
     Value: 1627712
   Exists: 1
+--- !u!114 &6132821863433506254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_DEATH
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_DEATH
+  Guid:
+    Data1: 1205324261
+    Data2: 1286454204
+    Data3: 631051414
+    Data4: -995253773
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2627
 --- !u!114 &6138860964628047595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,10 +1152,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846720654705055
+  lastModified: 637846747204507704
   FileSizes:
   - Name: Desktop
-    Value: 3132
+    Value: 3168
   Exists: 1
 --- !u!114 &6363618455241273662
 MonoBehaviour:

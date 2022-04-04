@@ -17,6 +17,9 @@ public class IntroScript : MonoBehaviour
     FMOD.Studio.EventInstance instanceDialogue;
     public FMODUnity.EventReference fmodDialogueEvent;
 
+    FMOD.Studio.EventInstance instancehumph;
+    public FMODUnity.EventReference humphEvent;
+
     public float lengthOfIntro;
 
     bool donePlaying = false;
@@ -34,6 +37,7 @@ public class IntroScript : MonoBehaviour
     private void Start()
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+        instancehumph = FMODUnity.RuntimeManager.CreateInstance(humphEvent);
         instanceDialogue = FMODUnity.RuntimeManager.CreateInstance(fmodDialogueEvent);
         mainMenu.SetActive(true);
         IntroCanvas.SetActive(false);
@@ -61,7 +65,8 @@ public class IntroScript : MonoBehaviour
             }
 
             if (donePlaying) {
-                gameStateManager.gameActive = true;
+                introStarted = false;
+                gameStateManager.activeAfterIntro();
             }
         }
     }
@@ -75,6 +80,7 @@ public class IntroScript : MonoBehaviour
 
     public void skipIntro(){
         instance.setPaused(true);
+        instancehumph.start();
         donePlaying = true;
         DOTween.Kill(mainCamera);
         mainCamera.orthographicSize = endingProjSize;
