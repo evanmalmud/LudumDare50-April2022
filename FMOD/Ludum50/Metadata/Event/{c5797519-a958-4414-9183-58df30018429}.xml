@@ -600,7 +600,7 @@
 	</object>
 	<object class="ParameterCondition" id="{56a46d2d-958e-43d8-9332-139a1cc4ee62}">
 		<property name="minimum">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<property name="maximum">
 			<value>100</value>
