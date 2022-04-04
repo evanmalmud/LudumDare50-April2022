@@ -6,7 +6,7 @@ public class LivesController : MonoBehaviour
 {
 
 
-    public GameObject[] lives;
+    public MugController[] lives;
 
     public int livesCount;
 
@@ -26,19 +26,17 @@ public class LivesController : MonoBehaviour
     {
         livesCount = lives.Length;
 
-        foreach(GameObject go in lives) {
-            go.SetActive(true);
+        foreach(MugController go in lives) {
+            go.swapSprite(true);
         }
     }
 
     public void loseLife() {
+        instance.start();
+        lives[livesCount - 1].swapSprite(false);
+        livesCount--;
         if (livesCount <= 1) {
-            instance.start();
             gameStateManager.gameOver();
-        } else {
-            instance.start();
-            lives[livesCount - 1].SetActive(false);
-            livesCount--;
         }
     }
 }

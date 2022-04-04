@@ -58,7 +58,7 @@ public class GameStateManager : MonoBehaviour
 
     public ConsoleController consoleController;
 
-    public GameObject gameOverCanvas;
+    public GameOverController gameOverController;
 
     public bool gameover = false;
     public bool gameActive = false;
@@ -97,7 +97,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         gameover = false;
-        gameOverCanvas.SetActive(false);
+        gameOverController.reset();
         livesController.reset();
         submitController.reset();
         //StartCoroutine(GetRequest(namesURL, names, namesCSV));
@@ -284,7 +284,7 @@ public class GameStateManager : MonoBehaviour
         gameover = true;
         gameActive = false;
         //pause things and show game over screen
-        gameOverCanvas.SetActive(true);
+        gameOverController.enableGameOver(roundCount);
     }
 
     public void replay()

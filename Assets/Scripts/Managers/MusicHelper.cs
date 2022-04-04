@@ -26,6 +26,10 @@ public class MusicHelper: MonoBehaviour
         if (isPlaying) {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", gameStateManager.roundCount);
             instance.setParameterByName("RoundCount", gameStateManager.roundCount);
+
+            //Death 
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Death", gameStateManager.gameover ? 1 : 0);
+            instance.setParameterByName("Death", gameStateManager.gameover ? 1 : 0);
         }
     }
     public void startMusic()

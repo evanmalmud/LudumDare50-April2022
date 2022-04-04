@@ -47,6 +47,7 @@ public class TimerController : MonoBehaviour
     public void reset()
     {
         defaultTimer = gameStateManager.lengthOfLevel;
+        defaultTimer++;
         tweenStarted = false;
         timerText.text = defaultTimer.ToString();
         currentCount = defaultTimer;
