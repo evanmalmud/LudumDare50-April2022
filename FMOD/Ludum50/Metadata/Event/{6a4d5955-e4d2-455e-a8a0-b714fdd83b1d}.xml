@@ -697,9 +697,7 @@
 		<property name="length">
 			<value>4.4000000000000048</value>
 		</property>
-		<property name="name">
-			<value>KEYBOARDS</value>
-		</property>
+		<property name="name" />
 		<relationship name="modulators">
 			<destination>{4b662791-2b52-44fe-b147-e2423f180896}</destination>
 			<destination>{5eeb4a0c-7046-42c9-aded-218a9a2899ef}</destination>

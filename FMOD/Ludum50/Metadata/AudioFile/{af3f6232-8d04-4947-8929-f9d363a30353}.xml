@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{af3f6232-8d04-4947-8929-f9d363a30353}">
 		<property name="assetPath">
-			<value>NEON-005.wav</value>
+			<value>assets SFX/NEON-005.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

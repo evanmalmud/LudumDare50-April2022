@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{5604f0b5-df6f-4ce6-97a3-fa090edd84ac}">
 		<property name="assetPath">
-			<value>OFFICE TONE.wav</value>
+			<value>assets SFX/OFFICE TONE.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

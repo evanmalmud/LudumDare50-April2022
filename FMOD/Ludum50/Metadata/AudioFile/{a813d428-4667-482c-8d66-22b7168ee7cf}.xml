@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a813d428-4667-482c-8d66-22b7168ee7cf}">
 		<property name="assetPath">
-			<value>BUTTON BEEP.wav</value>
+			<value>assets SFX/BUTTON BEEP.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

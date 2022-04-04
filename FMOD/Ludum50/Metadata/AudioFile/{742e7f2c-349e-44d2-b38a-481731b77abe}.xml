@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{742e7f2c-349e-44d2-b38a-481731b77abe}">
+		<property name="assetPath">
+			<value>assets DX/LD_DX_510_ConvoCas_DidYouSeeThatMemo.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>10.705333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
+		</relationship>
+	</object>
+</objects>

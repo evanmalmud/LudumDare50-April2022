@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{a5f52fdf-7e6a-4dde-8db7-7125ceea162a}">
 		<property name="assetPath">
-			<value>Bells, Doorbell, Classic, Electric, Ringing, Long SND45595 1.wav</value>
+			<value>assets SFX/Bells, Doorbell, Classic, Electric, Ringing, Long SND45595 1.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>96</value>
