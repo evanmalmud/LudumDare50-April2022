@@ -26,17 +26,22 @@ public class IntroScript : MonoBehaviour
 
     public GameObject mainMenu;
 
+    public GameObject IntroCanvas;
+
     private void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         mainMenu.SetActive(true);
+        IntroCanvas.SetActive(false);
     }
 
     public void startIntro()
     {
         mainMenu.SetActive(false);
+        IntroCanvas.SetActive(true);
         mainCamera.orthographicSize = startingProjSize;
         //instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        //instance.start();
+        instance.start();
         introStarted = true;
         mainCamera.DOOrthoSize(endingProjSize, lengthOfIntro);
     }
@@ -62,6 +67,14 @@ public class IntroScript : MonoBehaviour
         FMOD.Studio.PLAYBACK_STATE state;
         instance.getPlaybackState(out state);
         return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    }
+
+    public void skipIntro(){
+        instance.setPaused(true);
+        donePlaying = true;
+        DOTween.Kill(mainCamera);
+        mainCamera.orthographicSize = endingProjSize;
+        IntroCanvas.SetActive(false);
     }
 
 }

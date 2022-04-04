@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9062090736173130173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_503_ConvoCas_Bowling
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_503_ConvoCas_Bowling
+  Guid:
+    Data1: 1235511424
+    Data2: 1144418696
+    Data3: -1220544103
+    Data4: 1862117678
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-9045085792719908505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637846240521281775
+  lastModified: 637846612888079672
   FileSizes:
   - Name: Desktop
-    Value: 3151200
+    Value: 3160736
   Exists: 1
 --- !u!114 &-8924320285782732660
 MonoBehaviour:
@@ -47,6 +74,114 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1257
+--- !u!114 &-8854803499370356624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_INTRO
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_INTRO
+  Guid:
+    Data1: 753002706
+    Data2: 1125799329
+    Data3: -14260811
+    Data4: 1268337568
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7163818871618425167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_601_Paging_SupervisorToTorture
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_601_Paging_SupervisorToTorture
+  Guid:
+    Data1: 916954411
+    Data2: 1097242813
+    Data3: -408220006
+    Data4: -1794448633
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6632377836495888542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_206_Supervisor_ThatWouldBeGreat
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_206_Supervisor_ThatWouldBeGreat
+  Guid:
+    Data1: -1439304398
+    Data2: 1285629995
+    Data3: 1303646134
+    Data4: 1034567305
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5554970901281086410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_101_Dispatch_1144on12thStreet
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_101_Dispatch_1144on12thStreet
+  Guid:
+    Data1: 1269141659
+    Data2: 1209377266
+    Data3: -1032411998
+    Data4: -1095392815
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5498164574235711872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +209,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 268838
+--- !u!114 &-5375800279527372377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_307_Gossip_TheGuysFromAccounting
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_307_Gossip_TheGuysFromAccounting
+  Guid:
+    Data1: 6021401
+    Data2: 1135590367
+    Data3: 1856862349
+    Data4: -2109391323
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5129814114354959968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +290,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2390
---- !u!114 &-4447564535722645644
+--- !u!114 &-4151342967166238269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,21 +299,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/LevelMusic/RoundCount
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP
   m_EditorClassIdentifier: 
-  Name: RoundCount
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 4193502621
-    data2: 2395656688
-  Type: 1
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP
+  Guid:
+    Data1: -864138113
+    Data2: 1328357764
+    Data3: 403013263
+    Data4: -1053265965
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26800
 --- !u!114 &-3512037066241159170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +344,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2184979905868140212
+--- !u!114 &-3344348735149073085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,21 +353,71 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/RoundCount
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MainMenuMusic
   m_EditorClassIdentifier: 
-  Name: RoundCount
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 0
-  ID:
-    data1: 4193502621
-    data2: 2395656688
-  Type: 1
-  IsGlobal: 1
-  Labels: []
+  Path: event:/Music/MainMenuMusic
+  Guid:
+    Data1: 227484067
+    Data2: 1275038241
+    Data3: -2050781308
+    Data4: 816817572
+  Banks:
+  - {fileID: 6130497663226308815}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2228609835180961361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/DX.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Ludum50/Build/Desktop/DX.bank
+  Name: DX
+  StudioPath: bank:/DX
+  lastModified: 637846612863853691
+  FileSizes:
+  - Name: Desktop
+    Value: 1763232
   Exists: 1
+--- !u!114 &-2226713151302060242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_203_Supervisor_ElevenClocks
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_203_Supervisor_ElevenClocks
+  Guid:
+    Data1: 1428512690
+    Data2: 1174734589
+    Data3: 1034822037
+    Data4: 1338489214
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2033547422201438657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +439,33 @@ MonoBehaviour:
   Banks:
   - {fileID: -9045085792719908505}
   IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1769157607032285477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_507_ConvoBiz_FaxMachinesBusted
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_507_ConvoBiz_FaxMachinesBusted
+  Guid:
+    Data1: 662018276
+    Data2: 1104555639
+    Data3: -1881460037
+    Data4: 416816997
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
@@ -328,6 +570,7 @@ MonoBehaviour:
   - {fileID: 534083046462047438}
   - {fileID: 6130497663226308815}
   - {fileID: -9045085792719908505}
+  - {fileID: -2228609835180961361}
   EditorEvents:
   - {fileID: 1218974037034178766}
   - {fileID: -8924320285782732660}
@@ -343,15 +586,118 @@ MonoBehaviour:
   - {fileID: 6363618455241273662}
   - {fileID: -2033547422201438657}
   - {fileID: -1293511749487687150}
+  - {fileID: 132686952132077398}
+  - {fileID: -5375800279527372377}
+  - {fileID: 6779249855055184498}
+  - {fileID: -7163818871618425167}
+  - {fileID: -6632377836495888542}
+  - {fileID: 3551633695012869218}
+  - {fileID: 2134955367789219110}
+  - {fileID: -4151342967166238269}
+  - {fileID: -9062090736173130173}
+  - {fileID: 6067019182110389304}
+  - {fileID: -5554970901281086410}
+  - {fileID: 5903969295891388876}
+  - {fileID: 445340647580474373}
+  - {fileID: 3717641042756280922}
+  - {fileID: 32124726179538313}
+  - {fileID: -2226713151302060242}
+  - {fileID: 5092319508986982331}
+  - {fileID: -8854803499370356624}
+  - {fileID: 6381851081807163752}
+  - {fileID: -1769157607032285477}
+  - {fileID: 1249818236381527479}
+  - {fileID: 2673980950587612385}
+  - {fileID: -3344348735149073085}
   EditorParameters:
   - {fileID: 635303644047717143}
-  - {fileID: -2184979905868140212}
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637846240521281775
+  cacheTime: 637846612888079672
   cacheVersion: 10
+--- !u!114 &32124726179538313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_701_Callouts_HeadedDownToRecords
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_701_Callouts_HeadedDownToRecords
+  Guid:
+    Data1: 995812781
+    Data2: 1217711135
+    Data3: -884263495
+    Data4: 474447142
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &132686952132077398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_207_Supervisor_DontBoneMe
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_207_Supervisor_DontBoneMe
+  Guid:
+    Data1: 1216329238
+    Data2: 1240133908
+    Data3: 43336372
+    Data4: -1169407503
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &445340647580474373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_302_Gossip_IfIMessedUpAClock
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_302_Gossip_IfIMessedUpAClock
+  Guid:
+    Data1: 1260065955
+    Data2: 1260231626
+    Data3: 644001714
+    Data4: -300805091
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &534083046462047438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,10 +713,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637846240519660300
+  lastModified: 637846612863883724
   FileSizes:
   - Name: Desktop
-    Value: 1384
+    Value: 1672
   Exists: 1
 --- !u!114 &635303644047717143
 MonoBehaviour:
@@ -416,14 +762,40 @@ MonoBehaviour:
     Data4: -2062052028
   Banks:
   - {fileID: 6130497663226308815}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -4447564535722645644}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 88000
+  Length: 0
+--- !u!114 &1249818236381527479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_501_ConvoCas_GhostPeppers
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_501_ConvoCas_GhostPeppers
+  Guid:
+    Data1: 636260584
+    Data2: 1112617965
+    Data3: 1449903254
+    Data4: 1692505100
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2055421085602006751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +816,60 @@ MonoBehaviour:
     Data4: 1806403634
   Banks:
   - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2134955367789219110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_104_Dispatch_807BStreet
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_104_Dispatch_807BStreet
+  Guid:
+    Data1: -484578488
+    Data2: 1299189201
+    Data3: -1516781429
+    Data4: 1117382400
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2673980950587612385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_205_Supervisor_WorkYourselfToDeath
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_205_Supervisor_WorkYourselfToDeath
+  Guid:
+    Data1: 1619155706
+    Data2: 1274380462
+    Data3: 1442730646
+    Data4: 208723206
+  Banks:
+  - {fileID: -2228609835180961361}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -478,6 +904,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3551633695012869218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_510_ConvoBiz_DidYouSeeThatMemo
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_510_ConvoBiz_DidYouSeeThatMemo
+  Guid:
+    Data1: 1819610430
+    Data2: 1203999390
+    Data3: -1266162531
+    Data4: -953249668
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3717641042756280922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_502_ConvoCas_NeedANewRobe
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_502_ConvoCas_NeedANewRobe
+  Guid:
+    Data1: 903536803
+    Data2: 1284409388
+    Data3: 1767564966
+    Data4: 1083276953
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4278647491231061200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +985,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5092319508986982331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_202_Supervisor_YouveGotAKnack
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_202_Supervisor_YouveGotAKnack
+  Guid:
+    Data1: -1236054596
+    Data2: 1321178117
+    Data3: 1099298219
+    Data4: 448695204
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5903969295891388876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_602_Paging_NearDeathStandby
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_602_Paging_NearDeathStandby
+  Guid:
+    Data1: 1104665504
+    Data2: 1253702430
+    Data3: -636829518
+    Data4: 408949393
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6067019182110389304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_201_Supervisor_MeetingInFive
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_201_Supervisor_MeetingInFive
+  Guid:
+    Data1: -762502245
+    Data2: 1271985131
+    Data3: -1618303554
+    Data4: -1698107960
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6130497663226308815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,10 +1081,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637846240519860494
+  lastModified: 637846612872374557
   FileSizes:
   - Name: Desktop
-    Value: 1218496
+    Value: 858560
   Exists: 1
 --- !u!114 &6138860964628047595
 MonoBehaviour:
@@ -540,10 +1101,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846240519670306
+  lastModified: 637846612863893730
   FileSizes:
   - Name: Desktop
-    Value: 1508
+    Value: 3088
   Exists: 1
 --- !u!114 &6363618455241273662
 MonoBehaviour:
@@ -572,3 +1133,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1362
+--- !u!114 &6381851081807163752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_204_Supervisor_WhileWereYoung
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_204_Supervisor_WhileWereYoung
+  Guid:
+    Data1: -1753878826
+    Data2: 1249533548
+    Data3: 1584414907
+    Data4: -1974054508
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6779249855055184498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_308_Gossip_HeHadTheAudacity
+  m_EditorClassIdentifier: 
+  Path: event:/Dialogue/LD_DX_DIALOGUELOOP_EVENTS/LD_DX_308_Gossip_HeHadTheAudacity
+  Guid:
+    Data1: -99749601
+    Data2: 1252481944
+    Data3: 740188320
+    Data4: 1678177848
+  Banks:
+  - {fileID: -2228609835180961361}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
