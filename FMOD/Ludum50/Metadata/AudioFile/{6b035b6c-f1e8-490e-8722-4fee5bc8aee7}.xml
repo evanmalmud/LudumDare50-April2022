@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6b035b6c-f1e8-490e-8722-4fee5bc8aee7}">
+		<property name="assetPath">
+			<value>assets DX/LD_DX_012_IntroSkip_YeahOkayFine.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.6333333333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
+		</relationship>
+	</object>
+</objects>
