@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637846612888079672
+  lastModified: 637846628698423873
   FileSizes:
   - Name: Desktop
     Value: 3160736
@@ -155,6 +155,56 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6348364802260864395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Alexa's Music/RoundCount
+  m_EditorClassIdentifier: 
+  Name: RoundCount
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 170220243
+    data2: 2907492689
+  Type: 1
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-6338015097968689506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Alexa's Music/Death
+  m_EditorClassIdentifier: 
+  Name: Death
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 69967962
+    data2: 1734400385
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
 --- !u!114 &-5554970901281086410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,33 +394,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3344348735149073085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/MainMenuMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/MainMenuMusic
-  Guid:
-    Data1: 227484067
-    Data2: 1275038241
-    Data3: -2050781308
-    Data4: 816817572
-  Banks:
-  - {fileID: 6130497663226308815}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-2228609835180961361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +409,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/DX.bank
   Name: DX
   StudioPath: bank:/DX
-  lastModified: 637846612863853691
+  lastModified: 637846628696842418
   FileSizes:
   - Name: Desktop
     Value: 1763232
@@ -572,7 +595,6 @@ MonoBehaviour:
   - {fileID: -9045085792719908505}
   - {fileID: -2228609835180961361}
   EditorEvents:
-  - {fileID: 1218974037034178766}
   - {fileID: -8924320285782732660}
   - {fileID: -5498164574235711872}
   - {fileID: -5063300984358651393}
@@ -608,14 +630,14 @@ MonoBehaviour:
   - {fileID: -1769157607032285477}
   - {fileID: 1249818236381527479}
   - {fileID: 2673980950587612385}
-  - {fileID: -3344348735149073085}
+  - {fileID: 6571289428490531550}
   EditorParameters:
   - {fileID: 635303644047717143}
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637846612888079672
+  cacheTime: 637846628698423873
   cacheVersion: 10
 --- !u!114 &32124726179538313
 MonoBehaviour:
@@ -713,7 +735,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637846612863883724
+  lastModified: 637846628696872447
   FileSizes:
   - Name: Desktop
     Value: 1672
@@ -742,33 +764,6 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &1218974037034178766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/LevelMusic
-  m_EditorClassIdentifier: 
-  Path: event:/Music/LevelMusic
-  Guid:
-    Data1: 1074637579
-    Data2: 1180267173
-    Data3: 1848949403
-    Data4: -2062052028
-  Banks:
-  - {fileID: 6130497663226308815}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1249818236381527479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,10 +1076,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637846612872374557
+  lastModified: 637846628697082635
   FileSizes:
   - Name: Desktop
-    Value: 858560
+    Value: 1627648
   Exists: 1
 --- !u!114 &6138860964628047595
 MonoBehaviour:
@@ -1101,10 +1096,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846612863893730
+  lastModified: 637846628696882454
   FileSizes:
   - Name: Desktop
-    Value: 3088
+    Value: 3082
   Exists: 1
 --- !u!114 &6363618455241273662
 MonoBehaviour:
@@ -1160,6 +1155,35 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6571289428490531550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Alexa's Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Alexa's Music
+  Guid:
+    Data1: -981895911
+    Data2: 1142204760
+    Data3: -547847279
+    Data4: 696516912
+  Banks:
+  - {fileID: 6130497663226308815}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6348364802260864395}
+  - {fileID: -6338015097968689506}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 122000
 --- !u!114 &6779249855055184498
 MonoBehaviour:
   m_ObjectHideFlags: 0

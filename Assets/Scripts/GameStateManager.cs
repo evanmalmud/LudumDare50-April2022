@@ -270,14 +270,14 @@ public class GameStateManager : MonoBehaviour
         currentLengthOfLevel = 0f;
         screenController.reset();
         timerController.reset();
-        roundCount++;
         if (anyWrong){
             //instanceBadSubmit.start();
             livesController.loseLife();
         } else {
+            roundCount++;
             instanceGoodSubmit.start();
+            levelScalling();
         }
-        levelScalling();
     }
 
     public void gameOver() {
