@@ -182,13 +182,19 @@ public class GameStateManager : MonoBehaviour
                 //Pick random Clock/Person and value of action
                 int clockIndex = Random.Range(0, clocks.Count);
                 if(clocks[clockIndex].isDead) {
-                    //If dead pick again
-                    clockIndex = Random.Range(0, clocks.Count);
-                    if (clocks[clockIndex].isDead) {
-                        //If dead pick again
-                        clockIndex = Random.Range(0, clocks.Count);
+                    //Check all clocks for non-dead
+                    bool alldead = true;
+                    foreach(ClockController clock in clocks) {
+                        if(!clock.isDead) {
+                            alldead = false;
+                            clockIndex = clocks.IndexOf(clock);
+                        }
+                    }
+                    if(alldead) {
+                        gameOver();
                     }
                 }
+
 
                 int actionValue = (int)Random.Range(minMaxActionValues.x, minMaxActionValues.y);
 
@@ -319,5 +325,10 @@ public class GameStateManager : MonoBehaviour
         plugController.setStuck(false);
         //turn controller blue
         consoleController.isStuck = false;
+    }
+
+    public void deleteName(string nameWithColor)
+    {
+        screenController.replaceNameStrike(nameWithColor);
     }
 }

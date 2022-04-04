@@ -127,7 +127,7 @@ public class ClockController : MonoBehaviour
         if (isDead) {
             skullOverlaySprite.SetActive(true);
             gameStateManager.plugStuck();
-
+            gameStateManager.deleteName(nameWithColor);
         } else {
             skullOverlaySprite.SetActive(false);
 

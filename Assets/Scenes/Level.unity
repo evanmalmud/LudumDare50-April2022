@@ -2950,80 +2950,23 @@ PrefabInstance:
     - target: {fileID: 4717508274939181993, guid: e083f7c66112b904b8c7ca27c4ef290e,
         type: 3}
       propertyPath: m_text
-      value: 'BRUCE CAN SUCK IT sdsdddddddsdddsdsdsdsdsdddsd <word>(-2)</word>
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)<line-height=65%>\n\n</line-height>BRUCE MADE A
-        KALE SMOOTHIddddddddddddddddddddddddddddddEwww3 <color="red">(+2)</color>
-
-        BRUCE
-        MADE A KALEBRUCE MADE A KALEBRUCE MADg <color="red">-2</color>
-
-        BRUCE
-        MADE A KALE SMOOTHI
-
-        \n\n\n\n\n\n\n
-
-
-        BRUCE CAN SUCK IT (-2)
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE
-        CAN SUCK IT (-2)
-
-
-        BRUCE MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)
-
-
-
-
-        BRUCE CAN SUCK IT (-2)
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE MADE A KALE SMOOTHIE (+2)
-
-
-
-
-
-        BRUCE
-        CAN SUCK IT (-2)
-
-
-        BRUCE MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)
-
-
-
-
-
-        BRUCE CAN SUCK IT (-2)
-
-
-        BRUCE
-        MADE A KALE SMOOTHIE (+2)
-
-
-        BRUCE MADE A KALE SMOOTHIE (+2)'
+      value: "<u><color=\"red\">BRUCE</color></u>\n\n\n\n CAN SUCK IT sdsdddddddsdddsdsdsdsdsdsd
+        <nobr>(-2)</nobr>\n\nBRUCE MADE A KALE SMOOTHIE (+2)<line-height=65%>\\n\\n</line-height>BRUCE
+        MADE A KALE SMOOTHIddddddddddddddddddddddddddddddEwww3 <color=\"red\">(+2)</color>\nBRUCE
+        MADE A KALEBRUCE MADE A KALEBRUCE MADg <color=\"red\">-2</color>\nBRUCE MADE
+        A KALE SMOOTHI\n\\n\\n\\n\\n\\n\\n\\n\n\nBRUCE CAN SUCK IT (-2)\n\nBRUCE
+        MADE A KALE SMOOTHIE (+2)\n\nBRUCE MADE A KALE SMOOTHIE (+2)\n\nBRUCE CAN
+        SUCK IT (-2)\n\nBRUCE MADE A KALE SMOOTHIE (+2)\n\nBRUCE MADE A KALE SMOOTHIE
+        (+2)\n\n\n\nBRUCE CAN SUCK IT (-2)\n\nBRUCE MADE A KALE SMOOTHIE (+2)\n\nBRUCE
+        MADE A KALE SMOOTHIE (+2)\n\n\n\n\nBRUCE CAN SUCK IT (-2)\n\nBRUCE MADE A
+        KALE SMOOTHIE (+2)\n\nBRUCE MADE A KALE SMOOTHIE (+2)\n\n\n\n\nBRUCE CAN
+        SUCK IT (-2)\n\nBRUCE MADE A KALE SMOOTHIE (+2)\n\nBRUCE MADE A KALE SMOOTHIE
+        (+2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717508274939181993, guid: e083f7c66112b904b8c7ca27c4ef290e,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4717508274939181993, guid: e083f7c66112b904b8c7ca27c4ef290e,
         type: 3}
@@ -4952,12 +4895,22 @@ PrefabInstance:
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.44050997
+      value: 0.76975703
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.57094014
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.022132166
+      value: -0.013152778
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0047448426
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215394, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
@@ -5182,7 +5135,7 @@ PrefabInstance:
     - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.32157984
+      value: 0.5286863
       objectReference: {fileID: 0}
     - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
         type: 3}
@@ -5192,7 +5145,7 @@ PrefabInstance:
     - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.02665995
+      value: 0.0018072873
       objectReference: {fileID: 0}
     - target: {fileID: 1570856431680444446, guid: 43c0c7e367593c84cbc8d1362a482a6b,
         type: 3}
@@ -5579,6 +5532,11 @@ PrefabInstance:
       propertyPath: fmodEvent.Path
       value: event:/SFX/LD50_SFX_DD/LD_SFX_PRINTTER
       objectReference: {fileID: 0}
+    - target: {fileID: 6135458417012531151, guid: 363216b3eacfd704996be25a1a29d148,
+        type: 3}
+      propertyPath: gameStateManager
+      value: 
+      objectReference: {fileID: 1506226329}
     - target: {fileID: 6135458417012531151, guid: 363216b3eacfd704996be25a1a29d148,
         type: 3}
       propertyPath: fmodEvent.Guid.Data1
