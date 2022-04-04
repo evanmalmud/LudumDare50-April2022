@@ -39,12 +39,15 @@ public class TimerController : MonoBehaviour
                 currentCount -= Time.deltaTime;
                 updateTimer();
             }
+        } else {
+            tweenStarted = false;
         }
     }
 
     public void reset()
     {
         defaultTimer = gameStateManager.lengthOfLevel;
+        tweenStarted = false;
         timerText.text = defaultTimer.ToString();
         currentCount = defaultTimer;
         timerBlock.transform.localPosition = fullWaypoint.localPosition;

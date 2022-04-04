@@ -35,7 +35,7 @@ public class GameStateManager : MonoBehaviour
 
     public List<Dictionary<string, object>> names;
     public List<Dictionary<string, object>> textLines;
-
+    float defaultLengthOfLevel;
     public float lengthOfLevel = 10f;
     public float currentLengthOfLevel = 0f;
 
@@ -43,6 +43,7 @@ public class GameStateManager : MonoBehaviour
 
     public float timeToPostLevel = 5f;
 
+    Vector2 defaultminMaxNewText;
     public Vector2 minMaxNewText;
 
     public Vector2 minMaxActionValues;
@@ -79,11 +80,22 @@ public class GameStateManager : MonoBehaviour
             clock.gameObject.SetActive(false);
         }
 
+        defaultLengthOfLevel = lengthOfLevel;
+        defaultminMaxNewText = minMaxNewText;
+
         reset();
     }
 
     public void reset()
     {
+        lengthOfLevel = defaultLengthOfLevel;
+        minMaxNewText = defaultminMaxNewText;
+
+        foreach (ClockController clock in futureAddClocks) {
+            clock.gameObject.SetActive(false);
+            clocks.Remove(clock);
+        }
+
         gameover = false;
         gameOverCanvas.SetActive(false);
         livesController.reset();
@@ -98,12 +110,12 @@ public class GameStateManager : MonoBehaviour
             int indexOfName = Random.Range(0, names.Count);
             string nameChosen = (string)names[indexOfName][namesColumn];
             clock.setName(nameChosen);
+            clock.reset();
             //Remove used name
             names.RemoveAt(indexOfName);
         }
 
         submitController.reset();
-        bool anyWrong = false;
 
         currentLengthOfLevel = 0f;
         screenController.reset();
@@ -127,7 +139,7 @@ public class GameStateManager : MonoBehaviour
         lengthOfLevel++;
 
         if(roundCount % 4 == 0) {
-            minMaxNewText = minMaxNewText / 1.5f;
+            minMaxNewText = minMaxNewText / 1.1f;
         }
 
         if(roundCount == 4) {
@@ -138,6 +150,8 @@ public class GameStateManager : MonoBehaviour
                 clock.reset();
                 clocks.Add(clock);
             }
+            minMaxNewText = defaultminMaxNewText;
+            lengthOfLevel = defaultLengthOfLevel;
         }
     }
 

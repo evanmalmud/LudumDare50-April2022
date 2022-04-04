@@ -33,6 +33,7 @@ public class LivesController : MonoBehaviour
 
     public void loseLife() {
         if (livesCount <= 1) {
+            instance.start();
             gameStateManager.gameOver();
         } else {
             instance.start();

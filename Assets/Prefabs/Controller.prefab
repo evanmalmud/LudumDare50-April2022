@@ -542,13 +542,13 @@ MonoBehaviour:
   connectedClock: {fileID: 0}
   plusPress: {fileID: 4227714271420753622}
   minusPress: {fileID: 2024287505611320711}
-  clickEvent:
+  fmodEvent:
     Guid:
-      Data1: -338044115
-      Data2: 1323776917
-      Data3: -1865110383
-      Data4: -1793280801
-    Path: event:/SFX/LD50_SFX_DD/LD_SFX_BUTTONCLICK
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   timeToKeepPressedState: 0.1
   isStuck: 0
 --- !u!1 &2252667454607217021
@@ -791,7 +791,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 956119253
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2650c60af62231c47b8e68510ca411dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

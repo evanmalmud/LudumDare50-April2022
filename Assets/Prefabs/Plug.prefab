@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282571876}
   - component: {fileID: 282571877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1714405033
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f28de62ef3cc2124994ea632dd81aba9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699446130651425065}
   - component: {fileID: 7351121211609618016}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8220088430509966656}
   - component: {fileID: 1149987976310520317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: redGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395468394751870301}
   - component: {fileID: 1395468394751870300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plug_off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1714405033
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e722a14ba55832a49ada47c94af52c87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 1395468394783215395}
   - component: {fileID: 1395468394783215392}
   - component: {fileID: 1395468394783215393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395468395219057720}
   - component: {fileID: 1395468395219057723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plug_On
   m_TagString: Untagged
   m_Icon: {fileID: 0}
