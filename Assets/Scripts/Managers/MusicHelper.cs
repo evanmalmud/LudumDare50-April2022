@@ -5,8 +5,8 @@ using UnityEngine;
 public class MusicHelper: MonoBehaviour
 {
 
-    private FMOD.Studio.EventInstance instance;
-    private FMOD.Studio.EventInstance instance2;
+    public FMOD.Studio.EventInstance instance;
+    public FMOD.Studio.EventInstance instance2;
     public FMODUnity.EventReference music;
     public FMODUnity.EventReference bgnoise;
 

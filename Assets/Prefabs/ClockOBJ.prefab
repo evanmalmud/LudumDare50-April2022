@@ -1042,6 +1042,13 @@ MonoBehaviour:
   spirit: {fileID: 8820031799904037489}
   spitirAnim: {fileID: 343809464547198534}
   spirit_anim: {fileID: 7400000, guid: ba7b93889dda58e488275a889f639a54, type: 2}
+  deathGhostEvent:
+    Guid:
+      Data1: -1784670415
+      Data2: 1086093555
+      Data3: 1051518124
+      Data4: 1114230992
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_GHOST
 --- !u!1 &6623260201605654381
 GameObject:
   m_ObjectHideFlags: 0

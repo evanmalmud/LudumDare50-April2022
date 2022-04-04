@@ -15,12 +15,18 @@ public class ConsoleController : MonoBehaviour
     public GameObject plusPress;
     public GameObject minusPress;
 
-    public FMODUnity.EventReference clickEvent;
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
 
     public float timeToKeepPressedState = 5;
 
     public bool isStuck = false;
 
+
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+    }
 
     // Start is called before the first frame update
     void connected()
@@ -48,7 +54,7 @@ public class ConsoleController : MonoBehaviour
         if(connectedClock != null) {
             connectedClock.minusDay();
             StartCoroutine(playPress(minusPress));
-            FMODUnity.RuntimeManager.PlayOneShot(clickEvent, transform.position);
+            instance.start();
         }
     }
 
@@ -57,7 +63,7 @@ public class ConsoleController : MonoBehaviour
         if (connectedClock != null) {
             connectedClock.addDay();
             StartCoroutine(playPress(plusPress));
-            FMODUnity.RuntimeManager.PlayOneShot(clickEvent, transform.position);
+            instance.start();
         }
     }
 

@@ -267,3 +267,10 @@ MonoBehaviour:
   lastGoodLocation: {x: 0, y: 0, z: 0}
   mouseMoveOffset: {x: 0, y: 0, z: 0}
   hoverGO: {fileID: 5637830205797087062}
+  hammerEvent:
+    Guid:
+      Data1: 1057135148
+      Data2: 1094255161
+      Data3: 1532694700
+      Data4: 1435151763
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_HAMMER

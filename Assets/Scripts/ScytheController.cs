@@ -6,10 +6,14 @@ public class ScytheController : ClickableBase {
 
     public ClockController hoveredClockController = null;
 
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference scytheEvent;
+
     // Start is called before the first frame update
     void Start()
     {
         additionalStart();
+        instance = FMODUnity.RuntimeManager.CreateInstance(scytheEvent);
     }
 
     // Update is called once per frame
@@ -22,6 +26,7 @@ public class ScytheController : ClickableBase {
     {
         //Debug.Log("plug on drop");
         if (hoveredClockController != null && hoveredClockController.isDead) {
+            instance.start();
             hoveredClockController.killClockPerson();
             hoveredClockController = null;
             clickAndHeld = false;

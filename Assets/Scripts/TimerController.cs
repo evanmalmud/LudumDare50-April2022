@@ -22,10 +22,6 @@ public class TimerController : MonoBehaviour
 
     Vector2 distance;
 
-    private void Awake()
-    {
-        defaultTimer = gameStateManager.lengthOfLevel;
-    }
 
     private void Start()
     {
@@ -44,6 +40,7 @@ public class TimerController : MonoBehaviour
 
     public void reset()
     {
+        defaultTimer = gameStateManager.lengthOfLevel;
         timerText.text = defaultTimer.ToString();
         currentCount = defaultTimer;
         timerBlock.transform.localPosition = fullWaypoint.localPosition;

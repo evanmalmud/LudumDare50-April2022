@@ -15,10 +15,14 @@ public class PlugController : ClickableBase {
 
     public ConsoleController consoleController;
 
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference plugEvent;
+
     public bool isStuck = false;
 
     private void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(plugEvent);
         reset();
         additionalStart();
     }
@@ -66,6 +70,7 @@ public class PlugController : ClickableBase {
             //Debug.Log("plug on drop2");
             //Move to that waypoint position and drop
             isConnected = true;
+            instance.start();
             consoleController.isConnected = true;
             consoleController.connectedClock = hoveredClockController;
             transform.position = hoveredClockController.plugLockPoint.transform.position;

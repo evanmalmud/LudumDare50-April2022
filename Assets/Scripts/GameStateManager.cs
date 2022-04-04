@@ -59,6 +59,17 @@ public class GameStateManager : MonoBehaviour
 
     public bool gameover = false;
 
+    FMOD.Studio.EventInstance instanceGoodSubmit;
+    public FMODUnity.EventReference goodSubmitEvent;
+
+    //FMOD.Studio.EventInstance instanceBadSubmit;
+    //public FMODUnity.EventReference badSubmitEvent;
+
+    private void Start()
+    {
+        instanceGoodSubmit = FMODUnity.RuntimeManager.CreateInstance(goodSubmitEvent);
+        //instanceBadSubmit = FMODUnity.RuntimeManager.CreateInstance(badSubmitEvent);
+    }
     void Awake()
     {
         reset();
@@ -66,6 +77,7 @@ public class GameStateManager : MonoBehaviour
 
     public void reset()
     {
+        
         gameover = false;
         gameOverCanvas.SetActive(false);
         livesController.reset();
@@ -105,6 +117,18 @@ public class GameStateManager : MonoBehaviour
         return nameChosen;
     }
 
+    void levelScalling() {
+        lengthOfLevel++;
+
+        if(roundCount == 4) {
+            minMaxNewText = minMaxNewText / 1.5f;
+        }
+
+        if (roundCount == 8) {
+            minMaxNewText = minMaxNewText / 1.5f;
+        }
+    }
+
         // Update is called once per frame
     void Update()
     {
@@ -120,6 +144,14 @@ public class GameStateManager : MonoBehaviour
 
                 //Pick random Clock/Person and value of action
                 int clockIndex = Random.Range(0, clocks.Length);
+                if(clocks[clockIndex].isDead) {
+                    //If dead pick again
+                    clockIndex = Random.Range(0, clocks.Length);
+                    if (clocks[clockIndex].isDead) {
+                        //If dead pick again
+                        clockIndex = Random.Range(0, clocks.Length);
+                    }
+                }
 
                 int actionValue = (int)Random.Range(minMaxActionValues.x, minMaxActionValues.y);
 
@@ -214,11 +246,12 @@ public class GameStateManager : MonoBehaviour
         timerController.reset();
         roundCount++;
         if (anyWrong){
-            Debug.LogError("SOME ANSWERS WRONG");
+            //instanceBadSubmit.start();
             livesController.loseLife();
         } else {
-            Debug.Log("ALL RIGHT!!!!");
+            instanceGoodSubmit.start();
         }
+        levelScalling();
     }
 
     public void gameOver() {

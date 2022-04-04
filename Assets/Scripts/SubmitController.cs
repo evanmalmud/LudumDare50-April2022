@@ -16,9 +16,14 @@ public class SubmitController : MonoBehaviour
     public float timeToShow;
 
     public bool ticketShown = false;
+
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
+
     // Start is called before the first frame update
     private void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         reset();
     }
 
@@ -33,6 +38,7 @@ public class SubmitController : MonoBehaviour
 
     public void showTicket() {
         if (!ticketShown) {
+            instance.start();
             ticketSubmit.transform.DOLocalMove(shownWaypoint.localPosition, timeToShow);
             ticketShown = true;
         }

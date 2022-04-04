@@ -183,6 +183,14 @@ MonoBehaviour:
   lastGoodLocation: {x: 0, y: 0, z: 0}
   mouseMoveOffset: {x: 0, y: 0, z: 0}
   hoverGO: {fileID: 5250317604547615317}
+  hoveredClockController: {fileID: 0}
+  scytheEvent:
+    Guid:
+      Data1: -614960904
+      Data2: 1321564153
+      Data3: -1245509750
+      Data4: 84672870
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_SCYTHE
 --- !u!1 &5250317604547615317
 GameObject:
   m_ObjectHideFlags: 0

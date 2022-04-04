@@ -7,6 +7,14 @@ public class ClickManager : MonoBehaviour
 
     public ClickableBase storedClickable;
 
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
+
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +29,7 @@ public class ClickManager : MonoBehaviour
                     if(clickableBase.onClick()){
                         //Click success
                         storedClickable = clickableBase;
+                        instance.start();
                     }
                 }
             }

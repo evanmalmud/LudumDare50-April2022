@@ -12,9 +12,13 @@ public class LivesController : MonoBehaviour
 
     public GameStateManager gameStateManager;
 
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference fmodEvent;
+
     // Start is called before the first frame update
     void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         reset();
     }
 
@@ -31,6 +35,7 @@ public class LivesController : MonoBehaviour
         if (livesCount <= 1) {
             gameStateManager.gameOver();
         } else {
+            instance.start();
             lives[livesCount - 1].SetActive(false);
             livesCount--;
         }

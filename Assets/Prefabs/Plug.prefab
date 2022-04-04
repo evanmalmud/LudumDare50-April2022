@@ -397,6 +397,13 @@ MonoBehaviour:
   stuckSprite: {fileID: 609187378678687596}
   redGlow: {fileID: 672614934745514808}
   consoleController: {fileID: 0}
+  plugEvent:
+    Guid:
+      Data1: -1011175989
+      Data2: 1105730271
+      Data3: 74015625
+      Data4: -980993304
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_PLUGIN
   isStuck: 0
 --- !u!50 &1395468394783215392
 Rigidbody2D:

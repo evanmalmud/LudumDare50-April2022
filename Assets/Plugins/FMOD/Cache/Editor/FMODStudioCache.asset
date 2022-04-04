@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637845956444728634
+  lastModified: 637846138624128951
   FileSizes:
   - Name: Desktop
-    Value: 2944608
+    Value: 3151200
   Exists: 1
 --- !u!114 &-8924320285782732660
 MonoBehaviour:
@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 268838
+--- !u!114 &-5129814114354959968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_TOOLPICKUP
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_TOOLPICKUP
+  Guid:
+    Data1: 617516994
+    Data2: 1134150386
+    Data3: -845544298
+    Data4: -790888145
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5063300984358651393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +127,142 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 6055
+  Length: 2390
+--- !u!114 &-3512037066241159170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_GHOST
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_GHOST
+  Guid:
+    Data1: -1784670415
+    Data2: 1086093555
+    Data3: 1051518124
+    Data4: 1114230992
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2033547422201438657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_FLASHLIGHT
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_FLASHLIGHT
+  Guid:
+    Data1: 384798967
+    Data2: 1109499230
+    Data3: -91583560
+    Data4: 590643670
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1293511749487687150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_SCYTHE
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_SCYTHE
+  Guid:
+    Data1: -614960904
+    Data2: 1321564153
+    Data3: -1245509750
+    Data4: 84672870
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-252669850553410384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_COMPUTERMESSAGE
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_COMPUTERMESSAGE
+  Guid:
+    Data1: -311280032
+    Data2: 1319246694
+    Data3: 1374078369
+    Data4: -1312658484
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 200
+--- !u!114 &-31037720747572957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_NEGATIVESUBMIT
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_NEGATIVESUBMIT
+  Guid:
+    Data1: -110294480
+    Data2: 1198807927
+    Data3: -2058627409
+    Data4: 1239250137
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,12 +286,23 @@ MonoBehaviour:
   - {fileID: -8924320285782732660}
   - {fileID: -5498164574235711872}
   - {fileID: -5063300984358651393}
-  EditorParameters: []
+  - {fileID: 4278647491231061200}
+  - {fileID: 2694645418091563170}
+  - {fileID: -31037720747572957}
+  - {fileID: -3512037066241159170}
+  - {fileID: -252669850553410384}
+  - {fileID: 2055421085602006751}
+  - {fileID: -5129814114354959968}
+  - {fileID: 6363618455241273662}
+  - {fileID: -2033547422201438657}
+  - {fileID: -1293511749487687150}
+  EditorParameters:
+  - {fileID: 635303644047717143}
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637845956444728634
+  cacheTime: 637846138624128951
   cacheVersion: 10
 --- !u!114 &534083046462047438
 MonoBehaviour:
@@ -146,10 +319,34 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637845956434954373
+  lastModified: 637846138620658108
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1222
+  Exists: 1
+--- !u!114 &635303644047717143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RoundCount
+  m_EditorClassIdentifier: 
+  Name: RoundCount
+  StudioPath: parameter:/RoundCount
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 170220243
+    data2: 2907492689
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &1218974037034178766
 MonoBehaviour:
@@ -178,6 +375,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2055421085602006751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_HEALTHLOST
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_HEALTHLOST
+  Guid:
+    Data1: 1057969513
+    Data2: 1153726128
+    Data3: 1875820733
+    Data4: 1806403634
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2694645418091563170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_HAMMER
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_HAMMER
+  Guid:
+    Data1: 1057135148
+    Data2: 1094255161
+    Data3: 1532694700
+    Data4: 1435151763
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4278647491231061200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_POSITIVESUBMIT
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_POSITIVESUBMIT
+  Guid:
+    Data1: -1533893853
+    Data2: 1162658549
+    Data3: 2139406518
+    Data4: -415572055
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6130497663226308815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +471,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637845956443912964
+  lastModified: 637846138621398846
   FileSizes:
   - Name: Desktop
     Value: 858560
@@ -213,11 +491,38 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637845956434974386
+  lastModified: 637846138620678121
   FileSizes:
   - Name: Desktop
-    Value: 1086
+    Value: 1564
   Exists: 1
+--- !u!114 &6363618455241273662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_PLUGIN
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_PLUGIN
+  Guid:
+    Data1: -1011175989
+    Data2: 1105730271
+    Data3: 74015625
+    Data4: -980993304
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1362
 --- !u!114 &7634677601830865199
 MonoBehaviour:
   m_ObjectHideFlags: 0

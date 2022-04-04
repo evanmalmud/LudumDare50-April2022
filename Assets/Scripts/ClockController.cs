@@ -44,6 +44,9 @@ public class ClockController : MonoBehaviour
     public SpriteAnim spitirAnim;
     public AnimationClip spirit_anim;
 
+    FMOD.Studio.EventInstance instance;
+    public FMODUnity.EventReference deathGhostEvent;
+
     public void minusDay() {
         daysLeft--;
     }
@@ -55,9 +58,19 @@ public class ClockController : MonoBehaviour
 
     private void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(deathGhostEvent);
         bgSprite.SetActive(true);
         skullCenterSprite.SetActive(true);
         nameplateSprite.SetActive(true);
+
+        //Add Random Pointer Start Location
+        Vector3 newRotPointer1 = new Vector3();
+        newRotPointer1.z -= (Random.Range(1,10) * 360 * .1f);
+        pointers1.transform.Rotate(newRotPointer1);
+        Vector3 newRotPointer2 = new Vector3();
+        newRotPointer2.z -= (Random.Range(1, 10) * 360 * .1f) / 12;
+        pointers2.transform.Rotate(newRotPointer2);
+
         reset();
     }
 
@@ -140,6 +153,7 @@ public class ClockController : MonoBehaviour
     IEnumerator playSpritAnim() {
         spirit.SetActive(true);
         spitirAnim.Play(spirit_anim);
+        instance.start();
         yield return new WaitForSeconds(spirit_anim.length);
         spirit.SetActive(false);
         yield return null;
