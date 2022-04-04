@@ -33,8 +33,9 @@ public class GameStateManager : MonoBehaviour
     string namesURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdIufOO1eAzR6q6xyL6-C7iUs_F1z70E2lwy8HfnUKN9Xnxv4POnEhoW12LPXikt1-o9GM7XHOul5p/pub?output=csv";
     string textLineURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoY4fC9mC8q7u-mY_lRBgqTEAwqxdIBhDBvHcX9Sd-D_8e_Fcp8QqH1LzvuBS0_1u-64VAuKlefmIc/pub?output=csv";
 
-    public List<Dictionary<string, object>> names;
-    public List<Dictionary<string, object>> textLines;
+    public List<Dictionary<string, object>> namesLoaded;
+    public List<Dictionary<string, object>> namesUnused;
+    public List<Dictionary<string, object>> textLinesLoaded;
     float defaultLengthOfLevel;
     public float lengthOfLevel = 10f;
     public float currentLengthOfLevel = 0f;
@@ -68,6 +69,10 @@ public class GameStateManager : MonoBehaviour
 
     public MusicHelper musicHelper;
 
+    public Task namewebRequestComplete;
+    public Task textwebRequestComplete;
+    bool loadComplete = false;
+
     //FMOD.Studio.EventInstance instanceBadSubmit;
     //public FMODUnity.EventReference badSubmitEvent;
 
@@ -85,7 +90,8 @@ public class GameStateManager : MonoBehaviour
         defaultLengthOfLevel = lengthOfLevel;
         defaultminMaxNewText = minMaxNewText;
 
-        reset();
+        namewebRequestComplete = new Task(GetNamesRequest());
+        textwebRequestComplete = new Task(GetTextRequest());
     }
 
     public void activeAfterIntro() {
@@ -99,6 +105,7 @@ public class GameStateManager : MonoBehaviour
 
     public void reset()
     {
+        
         lengthOfLevel = defaultLengthOfLevel;
         minMaxNewText = defaultminMaxNewText;
 
@@ -111,19 +118,17 @@ public class GameStateManager : MonoBehaviour
         gameOverController.reset();
         livesController.reset();
         submitController.reset();
-        //StartCoroutine(GetRequest(namesURL, names, namesCSV));
-        //StartCoroutine(GetRequest(textLineURL, textLines, textLinesCSV));
-        names = CSVReader.Read(namesCSV);
-        textLines = CSVReader.Read(textLinesCSV);
+        //names = CSVReader.Read(namesCSV);
+        //textLines = CSVReader.Read(textLinesCSV);
 
         //Pick 5 random Names from above
         foreach (ClockController clock in clocks) {
-            int indexOfName = Random.Range(0, names.Count);
-            string nameChosen = (string)names[indexOfName][namesColumn];
+            int indexOfName = Random.Range(0, namesUnused.Count);
+            string nameChosen = (string)namesUnused[indexOfName][namesColumn];
             clock.setName(nameChosen);
             clock.reset();
             //Remove used name
-            names.RemoveAt(indexOfName);
+            namesUnused.RemoveAt(indexOfName);
         }
 
         submitController.reset();
@@ -136,13 +141,13 @@ public class GameStateManager : MonoBehaviour
     }
 
     public string getNewName() {
-        if(names.Count <= 0) {
-            names = CSVReader.Read(namesCSV);
+        if(namesUnused.Count <= 0) {
+            namesUnused = CSVReader.Read(namesCSV);
         }
-        int indexOfName = Random.Range(0, names.Count);
-        string nameChosen = (string)names[indexOfName][namesColumn];
+        int indexOfName = Random.Range(0, namesUnused.Count);
+        string nameChosen = (string)namesUnused[indexOfName][namesColumn];
         //Remove used name
-        names.RemoveAt(indexOfName);
+        namesUnused.RemoveAt(indexOfName);
         return nameChosen;
     }
 
@@ -152,6 +157,9 @@ public class GameStateManager : MonoBehaviour
         foreach(ClockController clock in clocks) {
             int minusRand = Random.Range(1, 3);
             clock.hiddenDaysLeft -= minusRand;
+            if(clock.hiddenDaysLeft <= 0) {
+                clock.hiddenDaysLeft = 1;
+            }
             clock.daysLeft = clock.hiddenDaysLeft;
         }
 
@@ -172,9 +180,18 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
-        // Update is called once per frame
+    // Update is called once per frame
     void Update()
     {
+        if (namewebRequestComplete.Running || textwebRequestComplete.Running) {
+            //Wait for this to complete
+            Debug.Log("One running");
+            return;
+        } else if(!namewebRequestComplete.Running && !textwebRequestComplete.Running && !loadComplete){
+            loadComplete = true;
+            namesUnused = namesLoaded;
+            reset();
+        }
         if(gameover || !gameActive)
         {
             return;
@@ -204,8 +221,8 @@ public class GameStateManager : MonoBehaviour
 
                 int actionValue = (int)Random.Range(minMaxActionValues.x, minMaxActionValues.y);
 
-                int textIndex = Random.Range(0, textLines.Count);
-                string positveValue = (string)textLines[textIndex][positiveColumn];
+                int textIndex = Random.Range(0, textLinesLoaded.Count);
+                string positveValue = (string)textLinesLoaded[textIndex][positiveColumn];
                 if ((positveValue).Equals("FALSE")) {
                     actionValue *= -1;
                 }
@@ -234,28 +251,55 @@ public class GameStateManager : MonoBehaviour
     }
 
 
-    IEnumerator GetRequest(string uri, List<Dictionary<string, object>> dictionary, TextAsset failloverAsset)
+    IEnumerator GetTextRequest()
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(uri)) {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(namesURL)) {
             // Request and wait for the desired page.
             yield return webRequest.SendWebRequest();
 
-            string[] pages = uri.Split('/');
+            string[] pages = namesURL.Split('/');
             int page = pages.Length - 1;
 
             switch (webRequest.result) {
                 case UnityWebRequest.Result.ConnectionError:
                 case UnityWebRequest.Result.DataProcessingError:
                     Debug.LogError(pages[page] + ": Error: " + webRequest.error);
-                    dictionary = CSVReader.Read(failloverAsset);
+                    namesLoaded = CSVReader.Read(namesCSV);
                     break;
                 case UnityWebRequest.Result.ProtocolError:
                     Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
-                    dictionary = CSVReader.Read(failloverAsset);
+                    namesLoaded = CSVReader.Read(namesCSV);
                     break;
                 case UnityWebRequest.Result.Success:
                     Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
-                    dictionary = CSVReader.Read(webRequest.downloadHandler.text);
+                    namesLoaded = CSVReader.Read(webRequest.downloadHandler.text);
+                    break;
+            }
+        }
+    }
+
+    IEnumerator GetNamesRequest()
+    {
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(textLineURL)) {
+            // Request and wait for the desired page.
+            yield return webRequest.SendWebRequest();
+
+            string[] pages = textLineURL.Split('/');
+            int page = pages.Length - 1;
+
+            switch (webRequest.result) {
+                case UnityWebRequest.Result.ConnectionError:
+                case UnityWebRequest.Result.DataProcessingError:
+                    Debug.LogError(pages[page] + ": Error: " + webRequest.error);
+                    textLinesLoaded = CSVReader.Read(textLinesCSV);
+                    break;
+                case UnityWebRequest.Result.ProtocolError:
+                    Debug.LogError(pages[page] + ": HTTP Error: " + webRequest.error);
+                    textLinesLoaded = CSVReader.Read(textLinesCSV);
+                    break;
+                case UnityWebRequest.Result.Success:
+                    Debug.Log(pages[page] + ":\nReceived: " + webRequest.downloadHandler.text);
+                    textLinesLoaded = CSVReader.Read(webRequest.downloadHandler.text);
                     break;
             }
         }
@@ -263,7 +307,7 @@ public class GameStateManager : MonoBehaviour
 
 
     public string createTextLine(int textIndex, int value, string name) {
-        string textLine = (string)textLines[textIndex][textColumn];
+        string textLine = (string)textLinesLoaded[textIndex][textColumn];
 
         textLine = textLine.Replace("NAME", name);
 

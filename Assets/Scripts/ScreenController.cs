@@ -25,7 +25,7 @@ public class ScreenController : MonoBehaviour
 
 
     public void replaceNameStrike(string nameWithColor) {
-        Debug.Log("REPLACE NAME - " + nameWithColor);
+        //Debug.Log("REPLACE NAME - " + nameWithColor);
         storedText = storedText.Replace(nameWithColor, "<u>" + nameWithColor + "</u>");
         screenText.text = storedText;
     }

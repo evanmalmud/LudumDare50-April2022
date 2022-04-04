@@ -67,6 +67,9 @@ public class IntroScript : MonoBehaviour
             if (donePlaying) {
                 introStarted = false;
                 gameStateManager.activeAfterIntro();
+                instance.setPaused(true);
+                IntroCanvas.SetActive(false);
+                instanceDialogue.start();
             }
         }
     }

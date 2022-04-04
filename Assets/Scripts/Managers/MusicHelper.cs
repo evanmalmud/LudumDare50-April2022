@@ -27,8 +27,13 @@ public class MusicHelper: MonoBehaviour
     private void Update()
     {
         if (isPlaying) {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", gameStateManager.roundCount);
-            instance.setParameterByName("RoundCount", gameStateManager.roundCount);
+            if(gameStateManager.gameover) {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", 0);
+                instance.setParameterByName("RoundCount", 0);
+            } else {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", gameStateManager.roundCount);
+                instance.setParameterByName("RoundCount", gameStateManager.roundCount);
+            }
         }
     }
 
