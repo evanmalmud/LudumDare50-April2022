@@ -149,6 +149,12 @@ public class GameStateManager : MonoBehaviour
     void levelScalling() {
         lengthOfLevel++;
 
+        foreach(ClockController clock in clocks) {
+            int minusRand = Random.Range(1, 3);
+            clock.hiddenDaysLeft -= minusRand;
+            clock.daysLeft = clock.hiddenDaysLeft;
+        }
+
         if(roundCount % 2 == 0) {
             minMaxNewText = minMaxNewText / 1.1f;
         }

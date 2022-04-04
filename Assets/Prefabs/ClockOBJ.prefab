@@ -1051,11 +1051,11 @@ MonoBehaviour:
     Path: event:/SFX/LD50_SFX_DD/LD_SFX_GHOST
   deathEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1205324261
+      Data2: 1286454204
+      Data3: 631051414
+      Data4: -995253773
+    Path: event:/SFX/LD50_SFX_DD/LD_SFX_DEATH
 --- !u!1 &6623260201605654381
 GameObject:
   m_ObjectHideFlags: 0

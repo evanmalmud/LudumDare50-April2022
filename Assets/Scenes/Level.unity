@@ -2049,34 +2049,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
         type: 3}
-      propertyPath: deathEvent.Path
-      value: event:/SFX/LD50_SFX_DD/LD_SFX_DEATH
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
-        type: 3}
       propertyPath: gameStateManager
       value: 
       objectReference: {fileID: 1506226329}
-    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
-        type: 3}
-      propertyPath: deathEvent.Guid.Data1
-      value: 1205324261
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
-        type: 3}
-      propertyPath: deathEvent.Guid.Data2
-      value: 1286454204
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
-        type: 3}
-      propertyPath: deathEvent.Guid.Data3
-      value: 631051414
-      objectReference: {fileID: 0}
-    - target: {fileID: 6623260201495146107, guid: b78cca07814f54f49925091a800872dd,
-        type: 3}
-      propertyPath: deathEvent.Guid.Data4
-      value: -995253773
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b78cca07814f54f49925091a800872dd, type: 3}
 --- !u!1 &1116488481
@@ -3359,12 +3334,12 @@ MonoBehaviour:
     Path: event:/Dialogue/LD_DX_DIALOGUELOOP
   humphEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  lengthOfIntro: 48
+      Data1: -1037420305
+      Data2: 1222385330
+      Data3: -1277502808
+      Data4: -54720112
+    Path: event:/Dialogue/LD_DX_INTROSKIP
+  lengthOfIntro: 46
   gameStateManager: {fileID: 1506226329}
   mainMenu: {fileID: 6234324802873638671}
   IntroCanvas: {fileID: 1557402712}
@@ -4900,7 +4875,7 @@ PrefabInstance:
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.57094014
+      value: 0.40648806
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
@@ -4910,7 +4885,7 @@ PrefabInstance:
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.0047448426
+      value: 0.07748121
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215394, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
