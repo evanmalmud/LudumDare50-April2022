@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bc99aefb-7e0e-49ff-97ca-9bae6859d8da}">
+		<property name="assetPath">
+			<value>LD_SFX_LAUGH-003.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6272083333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
+		</relationship>
+	</object>
+</objects>
