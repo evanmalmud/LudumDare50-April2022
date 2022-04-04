@@ -90,14 +90,16 @@ public class ClockController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rotatePointers();
-        selected(isSelected);
-        dead(isDead);
+        if (gameStateManager.gameActive) {
+            rotatePointers();
+            selected(isSelected);
+            dead(isDead);
 
-        daysLeftText.text = daysLeft.ToString();
+            daysLeftText.text = daysLeft.ToString();
 
-        if (hiddenDaysLeft <= 0) {
-            isDead = true;
+            if (hiddenDaysLeft <= 0) {
+                isDead = true;
+            }
         }
     }
 
@@ -135,7 +137,7 @@ public class ClockController : MonoBehaviour
     public void reset()
     {
         isDead = false;
-        daysLeft = 1 + Random.Range(1, 15);
+        daysLeft = 3 + Random.Range(1, 15);
         hiddenDaysLeft = daysLeft;
         gameStateManager.plugUnStuck();
     }

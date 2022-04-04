@@ -22,7 +22,9 @@ public class GameStateManager : MonoBehaviour
     public TextAsset textLinesCSV;
 
 
-    public ClockController[] clocks;
+    public List<ClockController> clocks;
+
+    public List<ClockController> futureAddClocks;
 
     public ScreenController screenController;
 
@@ -58,6 +60,7 @@ public class GameStateManager : MonoBehaviour
     public GameObject gameOverCanvas;
 
     public bool gameover = false;
+    public bool gameActive = false;
 
     FMOD.Studio.EventInstance instanceGoodSubmit;
     public FMODUnity.EventReference goodSubmitEvent;
@@ -72,12 +75,15 @@ public class GameStateManager : MonoBehaviour
     }
     void Awake()
     {
+        foreach (ClockController clock in futureAddClocks) {
+            clock.gameObject.SetActive(false);
+        }
+
         reset();
     }
 
     public void reset()
     {
-        
         gameover = false;
         gameOverCanvas.SetActive(false);
         livesController.reset();
@@ -120,19 +126,25 @@ public class GameStateManager : MonoBehaviour
     void levelScalling() {
         lengthOfLevel++;
 
-        if(roundCount == 4) {
+        if(roundCount % 4 == 0) {
             minMaxNewText = minMaxNewText / 1.5f;
         }
 
-        if (roundCount == 8) {
-            minMaxNewText = minMaxNewText / 1.5f;
+        if(roundCount == 4) {
+            //Add More CLOCKS
+            foreach(ClockController clock in futureAddClocks) {
+                clock.gameObject.SetActive(true);
+                clock.setName(getNewName());
+                clock.reset();
+                clocks.Add(clock);
+            }
         }
     }
 
         // Update is called once per frame
     void Update()
     {
-        if(gameover)
+        if(gameover || !gameActive)
         {
             return;
         }
@@ -143,13 +155,13 @@ public class GameStateManager : MonoBehaviour
 
 
                 //Pick random Clock/Person and value of action
-                int clockIndex = Random.Range(0, clocks.Length);
+                int clockIndex = Random.Range(0, clocks.Count);
                 if(clocks[clockIndex].isDead) {
                     //If dead pick again
-                    clockIndex = Random.Range(0, clocks.Length);
+                    clockIndex = Random.Range(0, clocks.Count);
                     if (clocks[clockIndex].isDead) {
                         //If dead pick again
-                        clockIndex = Random.Range(0, clocks.Length);
+                        clockIndex = Random.Range(0, clocks.Count);
                     }
                 }
 
@@ -256,12 +268,14 @@ public class GameStateManager : MonoBehaviour
 
     public void gameOver() {
         gameover = true;
+        gameActive = false;
         //pause things and show game over screen
         gameOverCanvas.SetActive(true);
     }
 
     public void replay()
     {
+        gameActive = true;
         reset();
     }
 

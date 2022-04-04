@@ -10,6 +10,8 @@ public class MusicHelper: MonoBehaviour
     public FMODUnity.EventReference music;
     public FMODUnity.EventReference bgnoise;
 
+    public GameStateManager gameStateManager;
+
     private bool isPlaying = false;
 
     // Start is called before the first frame update
@@ -17,6 +19,12 @@ public class MusicHelper: MonoBehaviour
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(music);
         instance2 = FMODUnity.RuntimeManager.CreateInstance(bgnoise);
+    }
+
+    private void Update()
+    {   
+        if(isPlaying)
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("RoundCount", gameStateManager.roundCount);
     }
     public void startMusic()
     {
