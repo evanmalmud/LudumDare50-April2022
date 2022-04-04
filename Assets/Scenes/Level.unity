@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85f998a33e961c349aae781bddc51b6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d311e63af3264f4e8d8f482bf618a44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2399,7 +2399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1208311909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3224,7 +3224,7 @@ MonoBehaviour:
   currentLengthOfLevel: 0
   timeUntilNextText: 0
   timeToPostLevel: 15
-  minMaxNewText: {x: 2, y: 4}
+  minMaxNewText: {x: 1.5, y: 3}
   minMaxActionValues: {x: 1, y: 3}
   timerController: {fileID: 1295947563}
   roundCount: 1
@@ -3241,6 +3241,7 @@ MonoBehaviour:
       Data3: 2139406518
       Data4: -415572055
     Path: event:/SFX/LD50_SFX_DD/LD_SFX_POSITIVESUBMIT
+  musicHelper: {fileID: 1506226334}
 --- !u!114 &1506226330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,7 +4434,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 21300000, guid: b9212da3c7b004d47a27134c22809017, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: d790288b311f6ff4695c0075962874b4, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4467,7 +4468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d790288b311f6ff4695c0075962874b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9212da3c7b004d47a27134c22809017, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4833,6 +4834,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1544046287}
     m_Modifications:
+    - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.44050997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.022132166
+      objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215394, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_RootOrder
@@ -5052,6 +5063,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scythe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.32157984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.011282921
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570856431680444445, guid: 43c0c7e367593c84cbc8d1362a482a6b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02665995
       objectReference: {fileID: 0}
     - target: {fileID: 1570856431680444446, guid: 43c0c7e367593c84cbc8d1362a482a6b,
         type: 3}
@@ -5966,7 +5992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6234324803968443064
 MonoBehaviour:
   m_ObjectHideFlags: 0

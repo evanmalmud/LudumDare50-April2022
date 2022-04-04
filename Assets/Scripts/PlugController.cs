@@ -83,18 +83,28 @@ public class PlugController : ClickableBase {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log(collision.gameObject.name);
         ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
         if(clockPlug != null) {
+            //Debug.Log("Enter " + collision.gameObject.name + clockPlug.clockController.name);
             hoveredClockController = clockPlug.clockController;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
+        if (clockPlug != null) {
+            if (clockPlug.clockController != hoveredClockController) {
+                hoveredClockController = clockPlug.clockController;
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        //Debug.Log(collision.gameObject.name);
         ClockPlug clockPlug = collision.gameObject.GetComponent<ClockPlug>();
         if (clockPlug != null) {
+            //Debug.Log("Exit " + collision.gameObject.name + clockPlug.clockController.name);
             if (clockPlug.clockController == hoveredClockController) {
                 hoveredClockController = null;
             }
