@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{e520b404-dd2e-4a27-8fae-7a70040764e9}">
 		<property name="assetPath">
-			<value>LD50_SFX_BLAH-001.wav</value>
+			<value>assets SFX/LD50_SFX_BLAH-001.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
