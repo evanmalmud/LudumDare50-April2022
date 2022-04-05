@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637846822380545588
+  lastModified: 637846996602897604
   FileSizes:
   - Name: Desktop
-    Value: 3365216
+    Value: 3383328
   Exists: 1
 --- !u!114 &-8969923714838388128
 MonoBehaviour:
@@ -232,6 +232,33 @@ MonoBehaviour:
   - False
   - True
   Exists: 1
+--- !u!114 &-5594552129046738730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/LD50_SFX_DD/LD_SFX_SELECT
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/LD50_SFX_DD/LD_SFX_SELECT
+  Guid:
+    Data1: -1218964281
+    Data2: 1212424508
+    Data3: -1567782011
+    Data4: -171963246
+  Banks:
+  - {fileID: -9045085792719908505}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1118
 --- !u!114 &-5554970901281086410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,13 +688,14 @@ MonoBehaviour:
   - {fileID: -8969923714838388128}
   - {fileID: 6132821863433506254}
   - {fileID: 4757705358344505120}
+  - {fileID: -5594552129046738730}
   EditorParameters:
   - {fileID: 635303644047717143}
   MasterBanks:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637846822380545588
+  cacheTime: 637846996602897604
   cacheVersion: 10
 --- !u!114 &32124726179538313
 MonoBehaviour:
@@ -1180,10 +1208,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846822378944121
+  lastModified: 637846996601721427
   FileSizes:
   - Name: Desktop
-    Value: 3214
+    Value: 3216
   Exists: 1
 --- !u!114 &6363618455241273662
 MonoBehaviour:
