@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{acca6501-acac-4691-ba5e-eed0e23635da}">
+		<property name="assetPath">
+			<value>assets DX/LD_DX_303_Gossip_TortureSeminar.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>8.5213333333333328</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
+		</relationship>
+	</object>
+</objects>
