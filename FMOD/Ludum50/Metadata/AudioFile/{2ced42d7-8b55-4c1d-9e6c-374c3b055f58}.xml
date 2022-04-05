@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{142af36e-6c61-4a19-af6d-875e1dfb60d5}">
+	<object class="AudioFile" id="{2ced42d7-8b55-4c1d-9e6c-374c3b055f58}">
 		<property name="assetPath">
-			<value>assets DX/LD_DX_101_Dispatch_1144on12thStreet.wav</value>
+			<value>assets DX/LD_DX_305_Gossip_OhTheNewGuy.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>4.7786666666666671</value>
+			<value>9.3520000000000003</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{3a5b4e85-add9-48d6-8b92-d5ac76742e9e}</destination>
