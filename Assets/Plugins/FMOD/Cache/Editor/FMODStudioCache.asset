@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637846996602897604
+  lastModified: 637846997233868580
   FileSizes:
   - Name: Desktop
-    Value: 3383328
+    Value: 3378656
   Exists: 1
 --- !u!114 &-8969923714838388128
 MonoBehaviour:
@@ -463,7 +463,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/DX.bank
   Name: DX
   StudioPath: bank:/DX
-  lastModified: 637846822378884068
+  lastModified: 637846997230300057
   FileSizes:
   - Name: Desktop
     Value: 1844992
@@ -695,7 +695,7 @@ MonoBehaviour:
   - {fileID: 534083046462047438}
   StringsBanks:
   - {fileID: 6138860964628047595}
-  cacheTime: 637846996602897604
+  cacheTime: 637846997233868580
   cacheVersion: 10
 --- !u!114 &32124726179538313
 MonoBehaviour:
@@ -793,7 +793,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637846822378934120
+  lastModified: 637846997230330071
   FileSizes:
   - Name: Desktop
     Value: 2172
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637846822379144302
+  lastModified: 637846997231160929
   FileSizes:
   - Name: Desktop
     Value: 1627712
@@ -1208,10 +1208,10 @@ MonoBehaviour:
   Path: FMOD/Ludum50/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846996601721427
+  lastModified: 637846997230340083
   FileSizes:
   - Name: Desktop
-    Value: 3216
+    Value: 3262
   Exists: 1
 --- !u!114 &6363618455241273662
 MonoBehaviour:

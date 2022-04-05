@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
+using Random = UnityEngine.Random;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -221,7 +223,17 @@ public class GameStateManager : MonoBehaviour
 
                 int actionValue = (int)Random.Range(minMaxActionValues.x, minMaxActionValues.y);
 
+
                 int textIndex = Random.Range(0, textLinesLoaded.Count);
+                try {
+                    int multi = (int)textLinesLoaded[textIndex][multiColumn];
+                    if(multi > 1) {
+                        actionValue += (int)Random.Range(minMaxActionValues.x, minMaxActionValues.y);
+                    }
+                } catch (Exception e) {
+                    Debug.Log(e);
+                }
+               
                 string positveValue = (string)textLinesLoaded[textIndex][positiveColumn];
                 if ((positveValue).Equals("FALSE")) {
                     actionValue *= -1;
