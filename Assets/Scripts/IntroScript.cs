@@ -91,4 +91,21 @@ public class IntroScript : MonoBehaviour
         instanceDialogue.start();
     }
 
+    //IEnumerator playTutorialActions() {
+        //Show People
+
+        // Move Plug and Click Controller
+
+        //Show Prompts
+
+        //Show Scythe Kill
+
+        /*spirit.SetActive(true);
+        spitirAnim.Play(spirit_anim);
+        instance.start();
+        yield return new WaitForSeconds(spirit_anim.length);
+        spirit.SetActive(false);
+        yield return null;*/
+    //}
+
 }

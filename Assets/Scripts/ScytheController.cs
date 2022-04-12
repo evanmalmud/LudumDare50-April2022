@@ -22,6 +22,16 @@ public class ScytheController : ClickableBase {
         additionalUpdate();
     }
 
+    public void moveAndClear(ClockController clockController)
+    {
+        if (clockController != null && clockController.isDead) {
+            instance.start();
+            clockController.killClockPerson();
+            hoveredClockController = null;
+            clickAndHeld = false;
+        }
+    }
+
     public override bool onDrop()
     {
         //Debug.Log("plug on drop");

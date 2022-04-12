@@ -51,9 +51,9 @@ public class ConsoleController : MonoBehaviour
 
         if (isConnected) {
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                onPlusClick();
-            } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 onMinusClick();
+            } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                onPlusClick();
             }   
         }
     }

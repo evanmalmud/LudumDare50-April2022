@@ -3391,9 +3391,9 @@ MonoBehaviour:
   namesCSV: {fileID: 4900000, guid: 9e0b8ed732d5c414b980f3298688e45e, type: 3}
   textLinesCSV: {fileID: 4900000, guid: a94e5ec18ef500645a7b1919a5bd4314, type: 3}
   clocks:
-  - {fileID: 1781326121}
   - {fileID: 1061287650}
   - {fileID: 663370284}
+  - {fileID: 1781326121}
   futureAddClocks:
   - {fileID: 631604873}
   - {fileID: 1801525154}
@@ -3409,6 +3409,7 @@ MonoBehaviour:
   roundCount: 1
   livesController: {fileID: 1116488482}
   plugController: {fileID: 1128729419}
+  scytheController: {fileID: 0}
   consoleController: {fileID: 1044197989}
   gameOverController: {fileID: 1506226335}
   gameover: 0
@@ -5023,22 +5024,22 @@ PrefabInstance:
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.76975703
+      value: 0.6476288
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.40648806
+      value: 0.2355087
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.013152778
+      value: -0.017223716
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215393, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.07748121
+      value: 0.09783595
       objectReference: {fileID: 0}
     - target: {fileID: 1395468394783215394, guid: 9feb506ef68331043a620f55fa09ccae,
         type: 3}
@@ -5135,31 +5136,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252667454275333357, guid: 9b3cf68e05adffe4483206682cd16086,
-        type: 3}
-      propertyPath: fmodEvent.Path
-      value: event:/SFX/LD50_SFX_DD/LD_SFX_BUTTONCLICK
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252667454275333357, guid: 9b3cf68e05adffe4483206682cd16086,
-        type: 3}
-      propertyPath: fmodEvent.Guid.Data1
-      value: -338044115
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252667454275333357, guid: 9b3cf68e05adffe4483206682cd16086,
-        type: 3}
-      propertyPath: fmodEvent.Guid.Data2
-      value: 1323776917
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252667454275333357, guid: 9b3cf68e05adffe4483206682cd16086,
-        type: 3}
-      propertyPath: fmodEvent.Guid.Data3
-      value: -1865110383
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252667454275333357, guid: 9b3cf68e05adffe4483206682cd16086,
-        type: 3}
-      propertyPath: fmodEvent.Guid.Data4
-      value: -1793280801
       objectReference: {fileID: 0}
     - target: {fileID: 2252667454275333358, guid: 9b3cf68e05adffe4483206682cd16086,
         type: 3}
@@ -6194,7 +6170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6234324803968443064
 MonoBehaviour:
   m_ObjectHideFlags: 0

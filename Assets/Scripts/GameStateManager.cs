@@ -59,6 +59,8 @@ public class GameStateManager : MonoBehaviour
 
     public PlugController plugController;
 
+    public ScytheController scytheController;
+
     public ConsoleController consoleController;
 
     public GameOverController gameOverController;
@@ -198,7 +200,11 @@ public class GameStateManager : MonoBehaviour
         {
             return;
         }
-        if(currentLengthOfLevel < lengthOfLevel) {
+
+        //Hot key checker
+        checkHotKeys();
+
+        if (currentLengthOfLevel < lengthOfLevel) {
             //Only post text if still in the main part of the level
             if(timeUntilNextText <= 0f) {
                 timeUntilNextText = Random.Range(minMaxNewText.x, minMaxNewText.y);
@@ -260,6 +266,36 @@ public class GameStateManager : MonoBehaviour
             submitted();
         }
         currentLengthOfLevel += Time.deltaTime;
+    }
+
+    void checkHotKeys() {
+        bool shiftPressed = false;
+        if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) {
+            shiftPressed = true;
+        }
+
+        int keyIndex = 0;
+        if(Input.GetKey(KeyCode.Keypad1) || Input.GetKey(KeyCode.Alpha1)) {
+            keyIndex = 1;
+        } else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2)) {
+            keyIndex = 2;
+        } else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3)) {
+            keyIndex = 3;
+        } else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4)) {
+            keyIndex = 4;
+        } else  if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5)) {
+            keyIndex = 5;
+        }
+
+        if(keyIndex > 0 && keyIndex <= clocks.Count) {
+            if(shiftPressed) {
+                // Use Scythe on that person
+                scytheController.moveAndClear(clocks[keyIndex-1]);
+            } else {
+                // Move Plug to that person
+                plugController.moveAndClear(clocks[keyIndex-1]);
+            }
+        }
     }
 
 
@@ -341,6 +377,7 @@ public class GameStateManager : MonoBehaviour
         bool anyWrong = false;
         foreach(ClockController clock in clocks) {
             if(clock.hiddenDaysLeft != clock.daysLeft) {
+                //Debug.Log(clock.gameObject.name + " wrong - " + clock.daysLeft + "  -  " + clock.hiddenDaysLeft);
                 clock.daysLeft = clock.hiddenDaysLeft;
                 anyWrong = true;
             }

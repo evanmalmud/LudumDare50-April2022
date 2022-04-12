@@ -31,6 +31,29 @@ public class PlugController : ClickableBase {
         isStuck = false;
     }
 
+    public void moveAndClear(ClockController clockController) {
+        if (!isStuck) {
+            //Remove current connection
+            if (hoveredClockController != null) {
+                hoveredClockController.isSelected = false;
+
+            }
+            clickAndHeld = true;
+            isConnected = false;
+            consoleController.isConnected = false;
+            consoleController.connectedClock = null;
+            //Set new connection
+            hoveredClockController = clockController;
+            isConnected = true;
+            instance.start();
+            consoleController.isConnected = true;
+            consoleController.connectedClock = hoveredClockController;
+            transform.position = hoveredClockController.plugLockPoint.transform.position;
+            hoveredClockController.isSelected = true;
+            clickAndHeld = false;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

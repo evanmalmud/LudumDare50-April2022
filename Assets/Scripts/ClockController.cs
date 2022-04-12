@@ -50,6 +50,8 @@ public class ClockController : MonoBehaviour
     FMOD.Studio.EventInstance instance2;
     public FMODUnity.EventReference deathEvent;
 
+
+    bool lastFrameDead = true;
     public void minusDay() {
         daysLeft--;
     }
@@ -103,9 +105,13 @@ public class ClockController : MonoBehaviour
             }
             rotatePointers();
             selected(isSelected);
-            dead(isDead);
 
             daysLeftText.text = daysLeft.ToString();
+
+            if(lastFrameDead != isDead){
+                dead(isDead);
+                lastFrameDead = isDead;
+            }
         }
     }
 
@@ -120,6 +126,12 @@ public class ClockController : MonoBehaviour
             glowPointerSprite1.SetActive(false);
             glowPointerSprite2.SetActive(false);
         }
+    }
+
+    public void someoneDied() {
+        skullOverlaySprite.SetActive(true);
+        gameStateManager.plugStuck();
+        gameStateManager.deleteName(nameWithColor);
     }
 
     void dead(bool isDead)
@@ -143,6 +155,7 @@ public class ClockController : MonoBehaviour
     public void reset()
     {
         isDead = false;
+        lastFrameDead = true;
         daysLeft = 3 + Random.Range(1, 15);
         hiddenDaysLeft = daysLeft;
         gameStateManager.plugUnStuck();
