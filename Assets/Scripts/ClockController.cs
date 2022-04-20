@@ -26,9 +26,10 @@ public class ClockController : MonoBehaviour
 
     public float rorateRatePerSecond = 1f;
 
-    public int daysLeft = 50;
-
-    public int hiddenDaysLeft = 50;
+    [SerializeField]
+    private int daysLeft = 50;
+    [SerializeField]
+    private int hiddenDaysLeft = 50;
 
     public TextMeshProUGUI daysLeftText;
 
@@ -50,14 +51,48 @@ public class ClockController : MonoBehaviour
     FMOD.Studio.EventInstance instance2;
     public FMODUnity.EventReference deathEvent;
 
+    public bool compareDaysEqual() {
+        Debug.Log("compareDaysEqual");
+        if (daysLeft == hiddenDaysLeft) {
+            return true;
+        }
+        return false;
+    }
+
+    public void resetDays() {
+        Debug.Log("resetDays");
+        daysLeft = hiddenDaysLeft;
+    }
+
+    public void printDays() {
+        Debug.Log(name + " wrong - " + daysLeft + "  -  " + hiddenDaysLeft);
+    }
+
+    public void randomMinus() {
+        Debug.Log("randomMinus");
+        int minusRand = Random.Range(1, 3);
+        hiddenDaysLeft -= minusRand;
+        if (hiddenDaysLeft <= 0) {
+            hiddenDaysLeft = 1;
+        }
+        daysLeft = hiddenDaysLeft;
+    }
+
+    public void updateHiddenDay(int actionValue) {
+        Debug.Log("updateHiddenDay");
+        hiddenDaysLeft += actionValue;
+    }
+
 
     bool lastFrameDead = true;
     public void minusDay() {
+        Debug.Log("minusDay");
         daysLeft--;
     }
 
     public void addDay()
     {
+        Debug.Log("addDay");
         daysLeft++;
     }
 

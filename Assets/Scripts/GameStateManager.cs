@@ -102,7 +102,7 @@ public class GameStateManager : MonoBehaviour
         gameActive = true;
 
         foreach (ClockController clock in clocks) {
-            clock.daysLeft = clock.hiddenDaysLeft;
+            clock.resetDays();
         }
 
     }
@@ -159,12 +159,7 @@ public class GameStateManager : MonoBehaviour
         lengthOfLevel++;
 
         foreach(ClockController clock in clocks) {
-            int minusRand = Random.Range(1, 3);
-            clock.hiddenDaysLeft -= minusRand;
-            if(clock.hiddenDaysLeft <= 0) {
-                clock.hiddenDaysLeft = 1;
-            }
-            clock.daysLeft = clock.hiddenDaysLeft;
+            clock.randomMinus();
         }
 
         if(roundCount % 2 == 0) {
@@ -250,7 +245,7 @@ public class GameStateManager : MonoBehaviour
                 string text = createTextLine(textIndex, actionValue, clocks[clockIndex].nameWithColor);
 
                 //Calc their hidden score
-                clocks[clockIndex].hiddenDaysLeft += actionValue;
+                clocks[clockIndex].updateHiddenDay(actionValue);
 
                 //Print text to player
                 screenController.appendText(text);
@@ -373,15 +368,16 @@ public class GameStateManager : MonoBehaviour
     }
 
     public void submitted() {
-        submitController.reset();
         bool anyWrong = false;
         foreach(ClockController clock in clocks) {
-            if(clock.hiddenDaysLeft != clock.daysLeft) {
-                //Debug.Log(clock.gameObject.name + " wrong - " + clock.daysLeft + "  -  " + clock.hiddenDaysLeft);
-                clock.daysLeft = clock.hiddenDaysLeft;
+            if(!clock.compareDaysEqual()) {
+                clock.printDays();
+                clock.resetDays();
                 anyWrong = true;
             }
         }
+
+        submitController.reset();
 
         currentLengthOfLevel = 0f;
         screenController.reset();

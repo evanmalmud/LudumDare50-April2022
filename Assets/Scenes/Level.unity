@@ -3571,14 +3571,14 @@ MonoBehaviour:
   lengthOfLevel: 6
   currentLengthOfLevel: 0
   timeUntilNextText: 0
-  timeToPostLevel: 15
+  timeToPostLevel: 30
   minMaxNewText: {x: 1.5, y: 3}
   minMaxActionValues: {x: 1, y: 3}
   timerController: {fileID: 1295947563}
   roundCount: 1
   livesController: {fileID: 1116488482}
   plugController: {fileID: 1128729419}
-  scytheController: {fileID: 0}
+  scytheController: {fileID: 6705909947839866763}
   consoleController: {fileID: 1044197989}
   gameOverController: {fileID: 1506226335}
   gameover: 0
@@ -6856,6 +6856,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5250317605129142164}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6705909947839866763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1570856431680444443, guid: 43c0c7e367593c84cbc8d1362a482a6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5250317605129142164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf0936f6ee56fc4daae81edae61bb0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7692938373722083401
 RectTransform:
   m_ObjectHideFlags: 0
